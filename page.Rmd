@@ -1,0 +1,82 @@
+---
+title: "Gallery"
+description: |
+  I started painting more regularly at the onset of the pandemic. Most of these are acrylic on stretched canvas, unless otherwise noted.
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+My partner and I had covid-19 a couple weeks before it was reported that cats could get sick, too.  
+![Cauchy in a mask](IMG_6941.jpg)
+  
+Cauchy screams (or yawns)    
+![He screams!](IMG_6762.jpg)    
+  
+
+## Zebrafish art
+
+The zebrafish spinal cord, viewed laterally but imagined underwater, complete with octodendrocytes and a seafloor plant Mauthner.  
+![Octodendrocytes!](IMG_6972.jpg)  
+
+![Zebrafish embryos in chorions!](IMG_6719.jpg)  
+
+![Adult zebrafish](IMG_6761.jpg)  
+    
+    
+Can you spot the zebrafish? A Denver zebrafish starry night.
+![A Denver zebrafish starry night](IMG_7192.jpg)  
+  
+  
+![Geometric zebrafish bbs](IMG_6998(1).jpg)  
+
+## Microglia art  
+
+Tectal microglia, here isolated (n=9 cells from each of 9 larvae) and below hugging neuronal somas.
+![Tectal microglia](IMG_6844.jpg)
+  
+![Tectal microglia and neurons!](IMG_6987.jpg)
+  
+## Oligodendrocyte art  
+    
+Bought a clock kit to timelapse-image oligodendrocytes at home! A sheath per hour is about 2.4 fold **slower** than this occurs in fish (5 hours for all sheaths). It's always oligo'clock!
+![It's always oligo'clock!](IMG_7040.jpg)  
+
+  
+Making more functional things. These are glia coasters (L to R): NG2, radial glia, microglia, oligodendrocyte.
+![Glia coasters: NG2, radial glia, microglia, oligodendrocyte](IMG_7105.jpg)  
+
+  
+When I started writing my dissertation (esp acknowledgments!) it was evident that I was going to need tissues.
+![Thesis tissue box for crying](IMG_7150.jpg)  
+
+  
+Oligodendrocytes without axons (first attempt)  
+![Oligodendrocytes-1](IMG_6900.jpg)  
+
+  
+  
+Oligodendrocytes and axons, playing with depth (much improved)    
+![Oligodendrocytes-2](IMG_7454.jpg)  
+
+    
+## Not science art
+
+![Flowers](IMG_6769.jpg)  
+ 
+![Triangles](IMG_6823.jpg)  
+
+A little too much time to reminisce during WFH. Lucy and Pearl, my pet birds (cockatiels) that I had as a kid.
+![Lucy and Pearl](IMG_6970.jpg)  
+
+I cut a couple square canvases and painted them as Zoom frames for a very 2020 Halloween. 
+![Halloween 2020](zoomframe.jpg)
+
+

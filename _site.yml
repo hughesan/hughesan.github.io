@@ -1,0 +1,26 @@
+name: "website_r_2"
+title: "Alexandria N. Hughes, Ph.D."
+description: |
+  My Website
+output_dir: "docs"
+theme: testb.css
+navbar:
+  search: true
+  logo:
+    image: webpng.png
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "CV"
+      href: CV_2021.pdf
+    - text: "Research"
+      href: research.html
+    - text: "Art"
+      href: page.html
+    - text: "Running"
+      href: misc.html
+    - text: "Miscellanea"
+      href: cauchy.html
+output: distill::distill_article

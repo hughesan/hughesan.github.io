@@ -1,0 +1,79 @@
+---
+title: "Running"
+description: |
+  Running for fun in Denver, CO.
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+    code_folding: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, R.options = list(width = 60))
+```
+
+
+![Fall colors on 7th St in the Congress Park neighborhood.](fallcolors7th.jpg)
+
+I started running in early 2017. When I started, I needed to stop every 0.25-0.5 mile to walk. I followed the 10% rule and have worked up to an average 35-40 miles per week for the last few years. Running is an outlet and it's important to me that I keep it fun. I don't wear a GPS (prefer perceived effort) and instead map distances post-run with [Footpath](https://footpathapp.com/), which I highly recommend.
+
+![Footpath map of a recent good long run around Washington Park.](washpark.jpg)
+
+## Miles in 2019-2020
+
+I started tracking weekly distances mid-2018, so I now have two full years of run data (2019, 2020). Here are some weekly data:
+
+```{r message=FALSE}
+library(tidyverse)
+library(ggpubr)
+library(cowplot)
+library(colorspace)
+```
+
+```{r}
+theme_set(theme_cowplot(font_size =18))
+```
+
+```{r}
+running <- read_csv('annualmpw.csv')
+running
+```
+```{r, echo=TRUE}
+running_long <- running %>% 
+  pivot_longer(!week, names_to = "year", values_to = "miles")
+```
+
+
+
+```{r}
+ggplot(running_long, aes(x=week, y=miles, color=year))+
+  scale_color_manual(values = c("#fc7b6d", "#05354b"))+
+  geom_smooth(fullrange=TRUE, span=0.2, size=1.25)+
+  geom_point(size=3, alpha=0.6)+
+  theme(legend.position = "top")+
+  labs(x="week [1:52]", y="miles/week") 
+```
+
+
+```{r}
+running %>%
+  summarize(`total miles in 2019` = sum(miles_2019), 
+            `total miles in 2020` = sum(miles_2020))
+```
+## Racing
+
+I don't really race, and especially not in the past year. Still, I have a hard time keeping track of the outcomes when I do, so I'll keep PR's here. 
+
+* 5k PR: 20:15 (6:53 min/mi), 5/4/2019 National MS Society 5K at City Park, Denver, CO. 1st F / 4th overall.
+* 10k PR: 42:39 (6:52 min/mi), 12/7/2019 Santa Stampede in Littleton, CO.
+* 10 mile: 1:13:49 (7:23 min/mi), 1/25/2019 Frosty's Frozen 5 and 10 at Hudson Gardens in Littleton, CO. 4th F.
+* Half marathon: 1:36:05 (7:20 min/mi), 2/22/2020 Snowman Stampede at Hudson Gardens in Littleton, CO. 4th F.
+* Full marathon? TBD!
+
+![National MS Society 5k, May 2019](walkmsfirst.jpg)
+
+
+
+
+

@@ -1,0 +1,34 @@
+---
+title: "Welcome!"
+description: |
+  Hi there! I'm Alex. I'm a postdoctoral fellow in Neuroscience and this is my personal website.
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+```{r}
+library(distill)
+```
+
+![Microglia exploring the zebrafish spinal cord over ~3 hours](surveying-spinal-cord.gif)
+
+# Quick links + contact
+
+
+
+[Google Scholar](https://scholar.google.com/citations?hl=en&user=wRo5MvAAAAAJ&view_op=list_works&sortby=pubdate)
+
+[ORCID](https://orcid.org/0000-0003-3922-7045)
+
+
+[Twitter](https://twitter.com/alexandglia?lang=en)
+
+
+
+
+
+
