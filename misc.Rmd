@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo=FALSE, R.options = list(width = 60))
 
 ![Fall colors on 7th St in the Congress Park neighborhood.](fallcolors7th.jpg)
 
-I started running in early 2017. When I started, I needed to stop every 0.25-0.5 mile to walk. I followed the 10% rule and have worked up to an average 35-40 miles per week for the last few years. Running is an outlet and it's important to me that I keep it fun. I don't wear a GPS (prefer perceived effort) and instead map distances post-run with [Footpath](https://footpathapp.com/), which I highly recommend.
+I started running in early 2017. When I started, I needed to stop every 0.25-0.5 mile to walk. I followed the 10% rule and have worked up to an average 35-40 miles per week for the last few years. Running is an outlet and it's important to me that I keep it fun. I don't wear a watch (prefer perceived effort) and instead map distances post-run with [Footpath](https://footpathapp.com/), which I highly recommend.
 
 ![Footpath map of a recent good long run around Washington Park.](washpark.jpg)
 
