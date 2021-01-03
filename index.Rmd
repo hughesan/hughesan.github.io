@@ -18,7 +18,7 @@ library(distill)
 
 # Quick links + contact
 
-
+[CV](CV_2021.pdf)
 
 [Google Scholar](https://scholar.google.com/citations?hl=en&user=wRo5MvAAAAAJ&view_op=list_works&sortby=pubdate)
 

@@ -37,7 +37,7 @@ theme_set(theme_cowplot(font_size =18))
 
 ```{r}
 running <- read_csv('annualmpw.csv')
-running
+as.data.frame(running) %>% select(miles_2019, miles_2020)
 ```
 ```{r, echo=TRUE}
 running_long <- running %>% 
@@ -55,15 +55,19 @@ ggplot(running_long, aes(x=week, y=miles, color=year))+
   labs(x="week [1:52]", y="miles/week") 
 ```
 
+I'm surprised at how similar my annual total was between 2019 and 2020, since I waited until the end of the year to check the total and I was pretty sure I cut back a little bit this year. I guess not!
 
 ```{r}
-running %>%
-  summarize(`total miles in 2019` = sum(miles_2019), 
-            `total miles in 2020` = sum(miles_2020))
+annual_miles <- running %>%
+  summarize(`total 2019` = sum(miles_2019), 
+            `total 2020` = sum(miles_2020))
+
+as.data.frame(annual_miles)
+
 ```
 ## Racing
 
-I don't really race, and especially not in the past year. Still, I have a hard time keeping track of the outcomes when I do, so I'll keep PR's here. 
+I don't race often (and most races were canceled last year). Still, I have a hard time keeping track of the outcomes when I do race, so I'll keep PR's here. 
 
 * 5k PR: 20:15 (6:53 min/mi), 5/4/2019 National MS Society 5K at City Park, Denver, CO. 1st F / 4th overall.
 * 10k PR: 42:39 (6:52 min/mi), 12/7/2019 Santa Stampede in Littleton, CO.
