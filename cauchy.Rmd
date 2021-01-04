@@ -1,18 +1,17 @@
 ---
 title: "Cauchy & Misc"
 description: |
-  Yes, welcome, this is a whole page of my cat and links to miscellaneous things I like.
+  Yes, welcome, this is a whole page of my cat.
 output:
-  distill::distill_article:
-    toc: true
-    toc_depth: 2
+  distill::distill_article
+    
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Cauchy
+
 
 ![Cauchy's response to "Foods?"](cauchy2020.jpg)
 
@@ -23,26 +22,6 @@ This is Cauchy, named for [this guy](https://en.wikipedia.org/wiki/Augustin-Loui
 ![Sometimes he plays games!](cauchbugs.gif)
 
 ![Usually he interrupts work.](nickcauch.jpg)
-
-
-
-
-# Links
-
-I like these pieces that introduce some problems in academic science and propose possible solutions.
-
-### Organization of academic science:
-  + The creation and waiting room-ness of the modern postdoc position: [Can Twitter Save Science? by Alex Danco](https://alexdanco.com/2020/02/15/can-twitter-save-science/) 
-  + The one PI - one lab model: [Academic precarity and the single PI model by Romain Brette](http://romainbrette.fr/academic-precarity-and-the-single-pi-lab-model/)
-
-  + Scientists aren't trained to mentor. That's a problem. By [Adam Ruben for Science](https://www.sciencemag.org/careers/2020/08/scientists-aren-t-trained-mentor-s-problem)
-  + Ben Barres proposed a mentoring index for PIs [in his 2013 piece on choosing a graduate advisor](barres-2013.pdf). Ben argued for assessing trainee h-indices, but well-mentored trainees aspire to careers both within and outside of academia.    
-
-### Stats misunderstanding and misuse is widespread in the biological sciences:
-  + An accessible introduction to the problem by [Tom Siegfried for Nautilus](http://nautil.us/issue/4/the-unlikely/sciences-significant-stats-problem)
-  + Especially prevalent in neuroscience: 
-    + [Nieuwenhuis et al., 2011](https://doi.org/10.1038/nn.2886)
-    + [Button et al., 2013](https://doi.org/10.1038/nrn3475)
 
 
 
