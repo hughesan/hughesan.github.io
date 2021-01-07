@@ -4,7 +4,7 @@ description: |
   My Website
 output_dir: "docs"
 theme: testb.css
-google_analytics: "G-SCLY2Y75XN"
+google_analytics: "UA-186784822-1"
 navbar:
   search: true
   logo:
