@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 # Overview
 I use zebrafish to investigate development and function of glial cells of the central nervous system. Zebrafish are small, transparent vertebrates that develop quickly. Here is one at 24 hours post-fertilization (hpf). I've labeled the heart with green fluorescent protein.  
 
-![Zebrafish at 24 hpf](zebheart.gif)  
+![Zebrafish at 24 hpf.](zebheart.gif)  
 
 
 # Graduate research
@@ -40,9 +40,9 @@ myelination. *Nature Neuroscience*, 23, 1055–1066.
 * [My dissertation](dissertation-hughes.pdf)
 
 
-![Microglia exhibit frequent, large calcium transients during development](Combined-Stacks.gif)
+![Microglia exhibit frequent calcium transients during development.](Combined-Stacks.gif)
 
-![Microglia in the larval optic tectum](gif-tectal-mg.gif) 
+![Microglia in the larval optic tectum.](gif-tectal-mg.gif) 
 
 # Previous work & undergraduate research
 

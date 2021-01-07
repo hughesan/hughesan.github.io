@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 library(distill)
 ```
 
-![Microglia exploring the zebrafish spinal cord over ~3 hours](surveying-spinal-cord.gif)
+![Microglia exploring the zebrafish spinal cord over ~3 hours.](surveying-spinal-cord.gif)
 
 # Quick links + contact
 
