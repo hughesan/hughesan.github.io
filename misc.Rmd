@@ -24,11 +24,14 @@ I started running in early 2017. When I started, I needed to stop every 0.25-0.5
 
 I started tracking weekly distances mid-2018, so I now have two full years of run data (2019, 2020). Here are some weekly data:
 
+
+
 ```{r message=FALSE}
 library(tidyverse)
 library(ggpubr)
 library(cowplot)
 library(colorspace)
+library(kableExtra)
 ```
 
 ```{r}
@@ -37,14 +40,24 @@ theme_set(theme_cowplot(font_size =18))
 
 ```{r}
 running <- read_csv('annualmpw.csv')
-as.data.frame(running) %>% select(miles_2019, miles_2020)
+showrun <- as.data.frame(running) 
 ```
-```{r, echo=TRUE}
+```{r}
+#https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
+
+kbl(showrun) %>%
+  kable_paper()%>%
+  scroll_box(height = "120px")
+  
+```
+
+```{r}
 running_long <- running %>% 
   pivot_longer(!week, names_to = "year", values_to = "miles")
 ```
 
-
+  
+And plotted. I'm surprised at how similar my annual total was between 2019 and 2020, since I waited until the end of the year to check the total and I was pretty sure I cut back a little bit this year (can sort of see it around week 25?). 
 
 ```{r}
 ggplot(running_long, aes(x=week, y=miles, color=year))+
@@ -55,14 +68,16 @@ ggplot(running_long, aes(x=week, y=miles, color=year))+
   labs(x="week [1:52]", y="miles/week") 
 ```
 
-I'm surprised at how similar my annual total was between 2019 and 2020, since I waited until the end of the year to check the total and I was pretty sure I cut back a little bit this year. I guess not!
+
 
 ```{r}
 annual_miles <- running %>%
   summarize(`total 2019` = sum(miles_2019), 
             `total 2020` = sum(miles_2020))
 
-as.data.frame(annual_miles)
+as.data.frame(annual_miles) %>%
+  kbl() %>%
+  kable_paper()
 
 ```
 ## Racing

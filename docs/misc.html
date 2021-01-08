@@ -2329,6 +2329,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   	color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
+  <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
   <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
   <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
@@ -2416,74 +2418,631 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>   miles_2019 miles_2020
-1       33.87      38.16
-2       34.00      40.35
-3       24.81      40.80
-4       34.60      41.80
-5       37.81      41.74
-6       34.72      41.24
-7       42.35      39.74
-8       40.08      41.19
-9       40.40      36.56
-10      27.53      42.40
-11      39.30      43.24
-12      46.64      40.81
-13      39.19      45.33
-14      45.20      41.70
-15      40.30      39.80
-16      43.00      30.03
-17      30.50      45.95
-18      36.30      43.56
-19      38.05      43.07
-20      34.30      42.91
-21      45.01      42.20
-22      44.36      47.16
-23      44.20      42.60
-24      45.07      41.37
-25      44.57      36.00
-26      41.21      35.40
-27      44.20      39.20
-28      41.07      35.45
-29      41.36      39.20
-30      38.30      36.38
-31      44.30      40.12
-32      42.04      41.14
-33      42.95      40.16
-34      42.10      37.19
-35      44.00      40.01
-36      38.89      38.73
-37      41.20      37.62
-38      41.58      38.20
-39      43.49      41.38
-40      43.70      31.00
-41      38.00      38.32
-42      43.92      38.74
-43      44.00      30.00
-44      32.70      29.25
-45      41.30      40.51
-46      35.50      38.52
-47      30.00      40.61
-48      38.60      40.34
-49      40.60      40.60
-50      45.26      36.50
-51      40.94      31.50
-52      17.40      20.40</code></pre>
+
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre><code><span class='va'>running_long</span> <span class='op'>&lt;-</span> <span class='va'>running</span> <span class='op'>%&gt;%</span> 
-  <span class='fu'>pivot_longer</span><span class='op'>(</span><span class='op'>!</span><span class='va'>week</span>, names_to <span class='op'>=</span> <span class='st'>"year"</span>, values_to <span class='op'>=</span> <span class='st'>"miles"</span><span class='op'>)</span>
-</code></pre>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:120px; ">
+<table class=" lightable-paper" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
+<thead>
+<tr>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+week
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+miles_2019
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+miles_2020
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+33.87
+</td>
+<td style="text-align:right;">
+38.16
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+34.00
+</td>
+<td style="text-align:right;">
+40.35
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+24.81
+</td>
+<td style="text-align:right;">
+40.80
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+34.60
+</td>
+<td style="text-align:right;">
+41.80
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+37.81
+</td>
+<td style="text-align:right;">
+41.74
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+34.72
+</td>
+<td style="text-align:right;">
+41.24
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+42.35
+</td>
+<td style="text-align:right;">
+39.74
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+40.08
+</td>
+<td style="text-align:right;">
+41.19
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+40.40
+</td>
+<td style="text-align:right;">
+36.56
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+27.53
+</td>
+<td style="text-align:right;">
+42.40
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+39.30
+</td>
+<td style="text-align:right;">
+43.24
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+46.64
+</td>
+<td style="text-align:right;">
+40.81
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+39.19
+</td>
+<td style="text-align:right;">
+45.33
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+45.20
+</td>
+<td style="text-align:right;">
+41.70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+40.30
+</td>
+<td style="text-align:right;">
+39.80
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+43.00
+</td>
+<td style="text-align:right;">
+30.03
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+30.50
+</td>
+<td style="text-align:right;">
+45.95
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+36.30
+</td>
+<td style="text-align:right;">
+43.56
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+38.05
+</td>
+<td style="text-align:right;">
+43.07
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+34.30
+</td>
+<td style="text-align:right;">
+42.91
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+45.01
+</td>
+<td style="text-align:right;">
+42.20
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+44.36
+</td>
+<td style="text-align:right;">
+47.16
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+44.20
+</td>
+<td style="text-align:right;">
+42.60
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+45.07
+</td>
+<td style="text-align:right;">
+41.37
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+44.57
+</td>
+<td style="text-align:right;">
+36.00
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+41.21
+</td>
+<td style="text-align:right;">
+35.40
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+44.20
+</td>
+<td style="text-align:right;">
+39.20
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+41.07
+</td>
+<td style="text-align:right;">
+35.45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+41.36
+</td>
+<td style="text-align:right;">
+39.20
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+38.30
+</td>
+<td style="text-align:right;">
+36.38
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+31
+</td>
+<td style="text-align:right;">
+44.30
+</td>
+<td style="text-align:right;">
+40.12
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+42.04
+</td>
+<td style="text-align:right;">
+41.14
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
+42.95
+</td>
+<td style="text-align:right;">
+40.16
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:right;">
+42.10
+</td>
+<td style="text-align:right;">
+37.19
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+44.00
+</td>
+<td style="text-align:right;">
+40.01
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:right;">
+38.89
+</td>
+<td style="text-align:right;">
+38.73
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+41.20
+</td>
+<td style="text-align:right;">
+37.62
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:right;">
+41.58
+</td>
+<td style="text-align:right;">
+38.20
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:right;">
+43.49
+</td>
+<td style="text-align:right;">
+41.38
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+43.70
+</td>
+<td style="text-align:right;">
+31.00
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:right;">
+38.00
+</td>
+<td style="text-align:right;">
+38.32
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+42
+</td>
+<td style="text-align:right;">
+43.92
+</td>
+<td style="text-align:right;">
+38.74
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+43
+</td>
+<td style="text-align:right;">
+44.00
+</td>
+<td style="text-align:right;">
+30.00
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+44
+</td>
+<td style="text-align:right;">
+32.70
+</td>
+<td style="text-align:right;">
+29.25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+41.30
+</td>
+<td style="text-align:right;">
+40.51
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+46
+</td>
+<td style="text-align:right;">
+35.50
+</td>
+<td style="text-align:right;">
+38.52
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+47
+</td>
+<td style="text-align:right;">
+30.00
+</td>
+<td style="text-align:right;">
+40.61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+38.60
+</td>
+<td style="text-align:right;">
+40.34
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:right;">
+40.60
+</td>
+<td style="text-align:right;">
+40.60
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:right;">
+45.26
+</td>
+<td style="text-align:right;">
+36.50
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+51
+</td>
+<td style="text-align:right;">
+40.94
+</td>
+<td style="text-align:right;">
+31.50
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+52
+</td>
+<td style="text-align:right;">
+17.40
+</td>
+<td style="text-align:right;">
+20.40
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="misc_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
+
 </div>
-<p>I’m surprised at how similar my annual total was between 2019 and 2020, since I waited until the end of the year to check the total and I was pretty sure I cut back a little bit this year. I guess not!</p>
+<p>And plotted. I’m surprised at how similar my annual total was between 2019 and 2020, since I waited until the end of the year to check the total and I was pretty sure I cut back a little bit this year (can sort of see it around week 25?).</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>  total 2019 total 2020
-1    2044.77    2026.18</code></pre>
+<p><img src="misc_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<table class=" lightable-paper" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+total 2019
+</th>
+<th style="text-align:right;">
+total 2020
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+2044.77
+</td>
+<td style="text-align:right;">
+2026.18
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <h2 id="racing">Racing</h2>
 <p>I don’t race often (and most races were canceled last year). Still, I have a hard time keeping track of the outcomes when I do race, so I’ll keep PR’s here.</p>
@@ -2497,7 +3056,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <figure>
 <img src="walkmsfirst.jpg" alt="" /><figcaption>National MS Society 5k, May 2019</figcaption>
 </figure>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
