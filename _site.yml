@@ -8,7 +8,7 @@ google_analytics: "UA-186784822-1"
 navbar:
   search: true
   logo:
-    image: webpng.png
+    image: logonew.png
   right:
     - text: "Home"
       href: index.html
