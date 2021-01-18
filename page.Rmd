@@ -1,7 +1,7 @@
 ---
 title: "Gallery"
 description: |
-  I started painting more regularly at the onset of the pandemic. Most of these are acrylic on stretched canvas, unless otherwise noted.
+  I started painting more regularly at the onset of the pandemic and am still very much an amateur. Most of these are acrylic on stretched canvas, unless otherwise noted.
 output:
   distill::distill_article:
     toc: true
@@ -78,5 +78,8 @@ A little too much time to reminisce during WFH. Lucy and Pearl, my pet birds (co
 
 I cut a couple square canvases and painted them as Zoom frames for a very 2020 Halloween. 
 ![Halloween 2020](zoomframe.jpg)
+
+
+
 
 
