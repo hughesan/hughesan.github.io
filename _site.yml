@@ -18,10 +18,6 @@ navbar:
       href: CV_2021.pdf
     - text: "Research"
       href: research.html
-    - text: "Art"
-      href: page.html
-    - text: "Running"
-      href: misc.html
     - text: "Misc"
       href: cauchy.html
 output: distill::distill_article
