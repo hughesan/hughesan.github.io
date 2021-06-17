@@ -24,6 +24,8 @@ library(distill)
 
 [ORCID](https://orcid.org/0000-0003-3922-7045)
 
+[Github](https://github.com/hughesan)
+
 
 [Twitter](https://twitter.com/alexandglia?lang=en)
   

@@ -9,7 +9,7 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-I’m a neuroscientist in the Washington, DC area. I received my PhD in Neuroscience at the University of Colorado Anschutz Medical Campus in Denver, CO. I’m now a postdoctoral fellow at the NIH, and on the side, I am a part-time graduate student in Statistics.
+I’m a neuroscientist in the Washington, DC area. I received my PhD in Neuroscience at the University of Colorado Anschutz Medical Campus in Denver, CO. I’m now a postdoctoral fellow at the NIH, and on the side I am pursuing part-time studies in Statistics.
 
 
 My past and present research is described on my [Research](research.html) page. 

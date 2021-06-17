@@ -1,7 +1,7 @@
 ---
-title: "Running"
+title: "Running log"
 description: |
-  Running for fun in Denver, CO.
+  DC is a lot hillier than Denver!
 output:
   distill::distill_article:
     toc: true
@@ -16,9 +16,9 @@ knitr::opts_chunk$set(echo=FALSE, R.options = list(width = 60))
 
 ![Fall colors on 7th St in the Congress Park neighborhood.](fallcolors7th.jpg)
 
-I started running in early 2017. When I started, I needed to stop every 0.25-0.5 mile to walk. I followed the 10% rule and have worked up to an average 35-40 miles per week for the last few years. Running is an outlet and it's important to me that I keep it fun. I don't wear a watch (prefer perceived effort) and instead map distances post-run with [Footpath](https://footpathapp.com/), which I highly recommend.
+Running is an outlet and it's important to me that I keep it fun. I don't wear a watch (prefer perceived effort) and instead map distances post-run with [Footpath](https://footpathapp.com/), which I highly recommend.
 
-![Footpath map of a recent good long run around Washington Park.](washpark.jpg)
+![Footpath map of a good long run around Washington Park in Denver.](washpark.jpg)
 
 ## Miles
 
@@ -65,7 +65,7 @@ ggplot(running_long, aes(x=week, y=miles, color=year))+
   geom_line(span=0.2, na.rm=TRUE)+
   geom_point(size=3, alpha=0.6, na.rm=TRUE)+
   theme(legend.position = "top")+
-  labs(x="week [1:52]", y="miles/week") 
+  labs(x="week 1 - 52]", y="miles/week") 
 ```
 
 
@@ -82,7 +82,7 @@ as.data.frame(annual_miles) %>%
 ```
 ## Racing
 
-I don't race often (and most races were canceled last year). Still, I have a hard time keeping track of the outcomes when I do race, so I'll keep PR's here. 
+I don't race often (and most races were canceled last year). Still, I have a hard time keeping track of the outcomes when I do race, so I'm keeping PRs here. 
 
 * 5k PR: 20:15 (6:53 min/mi), 5/4/2019 National MS Society 5K at City Park, Denver, CO. 1st F / 4th overall.
 * 10k PR: 42:39 (6:52 min/mi), 12/7/2019 Santa Stampede in Littleton, CO.

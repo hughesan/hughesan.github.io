@@ -33,6 +33,10 @@ sheath formation. *Nature Communications*, 10(1), 1-15.
 myelination. *Nature Neuroscience*, 23, 1055–1066.
   + [Paper link](https://www.nature.com/articles/s41593-020-0654-2)
   + [PDF](hughes-appel-2020.pdf)
+  
+* **Hughes AN** (2021). Glial cells promote myelin formation and elimination. *Frontiers in Cell and Developmental Biology*, 9, 661486.
+  + [Paper link](https://doi.org/10.3389/fcell.2021.661486)
+  + [PDF](frontiers.pdf)
 
 * I had the opportunity to write a blog piece for The Node about the story behind the microglia story, [Retracting sheaths & words](https://thenode.biologists.com/retracting-sheaths-and-words/highlights/)
 
