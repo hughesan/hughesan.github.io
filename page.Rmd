@@ -1,7 +1,7 @@
 ---
 title: "Gallery"
 description: |
-  I started painting more regularly at the onset of the pandemic and am still very much an amateur. Most of these are acrylic on stretched canvas, unless otherwise noted.
+  I started painting more regularly at the onset of the pandemic and am still very much an amateur. Most of these are acrylic on stretched canvas, unless otherwise noted. Some are available in my Redbubble shop!
 output:
   distill::distill_article:
     toc: true
@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-
+#### [Redbubble shop](https://www.redbubble.com/people/alexandglia/shop?asc=u)
 
 My partner and I had covid-19 a couple weeks before it was reported that cats could get sick, too.  
 ![Cauchy in a mask](IMG_6941.jpg)

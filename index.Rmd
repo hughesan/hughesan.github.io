@@ -28,6 +28,8 @@ library(distill)
 
 
 [Twitter](https://twitter.com/alexandglia?lang=en)
+
+[Redbubble art shop](https://www.redbubble.com/people/alexandglia/shop?asc=u)
   
 # 
 

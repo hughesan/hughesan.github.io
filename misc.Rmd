@@ -65,7 +65,7 @@ ggplot(running_long, aes(x=week, y=miles, color=year))+
   geom_line(span=0.2, na.rm=TRUE)+
   geom_point(size=3, alpha=0.6, na.rm=TRUE)+
   theme(legend.position = "top")+
-  labs(x="week 1 - 52]", y="miles/week") 
+  labs(x="week 1 - 52", y="miles/week") 
 ```
 
 
