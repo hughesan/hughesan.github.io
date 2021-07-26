@@ -23,7 +23,7 @@ html {
   --fig-cap-size:    13px;
   /*-- Main font colors --*/
   --title-color:     #015661;
-  --header-color:    #015661;                    /* edited was 1st ca225e, 79a490 both*/
+  --header-color:    #015661;                    /* teal 015661  both*/
   --body-color:      #030303;                    /* edited */
   --aside-color:     rgba(0, 0, 0, 0.6);
   --fig-cap-color:   rgba(0, 0, 0, 0.6);
@@ -36,7 +36,7 @@ html {
 
 
 body {
-  background-color: #ffffff;
+  background-color: #f6d700; /* ffffff white */
 }
 
 /*-- ARTICLE METADATA --*/
@@ -66,17 +66,17 @@ d-appendix {
 
 .distill-site-header {
   --title-size:       18px;
-  --text-color:       #f6d700;                   /* the top header strip text*/
+  --text-color:       #015661;                   /* yellow f6d700 the top header strip text*/
   --text-size:        15px;
-  --hover-color:      #015661;                   /* top header strip hover  */
-  --bkgd-color:       #05354b;                      /* edited 05354b dark blue 015661*/
+  --hover-color:      #f6d700;                   /* top header strip hover  */
+  --bkgd-color:       #ffffff;                      /* edited 05354b dark blue 015661 teal*/
 }
 
 .distill-site-footer {
-  --text-color:       #f6d700;                   /* edited */
+  --text-color:       #015661;                   /* edited */
   --text-size:        15px;
-  --hover-color:      #015661;
-  --bkgd-color:       #05354b;                 /* edited */
+  --hover-color:      #f6d700;
+  --bkgd-color:       #ffffff;                 /* edited */
 }
 
 /*-- Additional custom styles --*/
