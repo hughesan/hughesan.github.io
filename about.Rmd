@@ -15,7 +15,4 @@ I’m a neuroscientist in the Washington, DC area. I received my PhD in Neurosci
 My past and present research is described on my [Research](research.html) page. 
 
 
-My career goal is to become an independent investigator in neuroscience and to teach statistics courses for researchers in the biological sciences.
-
-
 I also really like [running](misc.html), [taking pictures of my cat](cauchy.html), [painting](page.html) and scientific illustration, and board games. I built this website with the R package {Distill}, which you can learn more about [here](https://rstudio.github.io/distill/).
