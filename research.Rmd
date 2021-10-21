@@ -15,16 +15,15 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Overview
 
-I used zebrafish to investigate development and function of glial cells of the central nervous system. Zebrafish are small, transparent vertebrates that develop quickly. Here is one at 24 hours post-fertilization (hpf). I labeled the heart with green fluorescent protein.  
+I use zebrafish to investigate development and function of glial cells of the central nervous system. Zebrafish are small, transparent vertebrates that develop quickly. Here is one at 24 hours post-fertilization (hpf) - I labeled the heart with green fluorescent protein.  
 
 ![Zebrafish at 24 hpf.](zebheart.gif)  
   
     
 ![Timeline of glial and neuronal development in zebrafish.](fishtimeline.png)
 
-# Graduate research
 
-I did my graduate training in Bruce Appel's lab at the University of Colorado Anschutz Medical Campus and defended my PhD in Neuroscience in September 2020. I pursued two separate projects in the lab: in the first, I investigated the localization and function of synaptic proteins in oligodendrocytes, and in the second I discovered that microglia prune myelin sheaths during development. 
+I did my graduate training at the University of Colorado Anschutz Medical Campus and defended my PhD in Neuroscience in September 2020. I pursued two separate projects in Bruce Appel's lab: in the first, I investigated the localization and function of synaptic proteins in oligodendrocytes, and in the second I discovered that microglia prune myelin sheaths during development. 
 
 * **Hughes AN** & Appel B (2019). Oligodendrocytes express synaptic proteins that modulate myelin
 sheath formation. *Nature Communications*, 10(1), 1-15.
