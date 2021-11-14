@@ -1,7 +1,7 @@
 ---
 title: "Running log"
 description: |
-  DC is a lot hillier than Denver!
+  Beep boop
 output:
   distill::distill_article:
     toc: true
@@ -22,7 +22,7 @@ Running is an outlet and it's important to me that I keep it fun. I don't wear a
 
 ## Miles
 
-I started tracking weekly distances mid-2018, so I now have two full years of run data (2019, 2020). A neat thing about building this site with R is that I can easily show and plot these data. Here are some weekly data:
+I started tracking weekly distances mid-2018. A neat thing about building this site with R is that I can easily show and plot these data. Here are some weekly data:
 
 
 
@@ -31,7 +31,7 @@ library(tidyverse)
 library(cowplot)
 library(kableExtra)
 
-theme_set(theme_cowplot(font_size =18))
+theme_set(theme_cowplot(font_size = 18))
 ```
 
 

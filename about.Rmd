@@ -1,7 +1,7 @@
 ---
 title: "About me"
 description: |
-   Hi there! I'm Alex. I'm a neuroscientist and this is my personal website.
+   Hi, I'm Alex. I'm a biostatistician & neuroscientist and this is my personal website.
   
 ---
 
@@ -9,10 +9,10 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-I’m a neuroscientist in the Washington, DC area. I received my PhD in Neuroscience at the University of Colorado Anschutz Medical Campus in Denver, CO. I’m now a postdoctoral fellow at the NIH, and on the side I am pursuing part-time studies in Statistics.
+I received my PhD in Neuroscience at the University of Colorado Anschutz Medical Campus in September 2020 and then began graduate studies in Statistics at Texas A&M University. I now get to provide statistical analysis support to researchers in public health, genomics, and epidemiology in my work as a biostatistician at Westat.
 
 
-My past and present research is described on my [Research](research.html) page. 
+My previous neuroscience research is described on my [Research](research.html) page. 
 
 
 I also really like [running](misc.html), [taking pictures of my cat](cauchy.html), [painting](page.html) and scientific illustration, and board games. I built this website with the R package {Distill}, which you can learn more about [here](https://rstudio.github.io/distill/).

@@ -1,7 +1,7 @@
 ---
 title: "Welcome!"
 description: |
-  Hi there! I'm Alex. I'm a neuroscientist and this is my personal website.
+  Hi, I'm Alex. I'm a biostatistician & neuroscientist and this is my personal website.
 site: distill::distill_website
 ---
 
@@ -27,7 +27,7 @@ library(distill)
 [Github](https://github.com/hughesan)
 
 
-[Twitter](https://twitter.com/alexandglia?lang=en)
+[Twitter](https://twitter.com/alexnhughes?lang=en)
 
 [Redbubble art shop](https://www.redbubble.com/people/alexandglia/shop?asc=u)
   

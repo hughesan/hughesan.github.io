@@ -1,7 +1,7 @@
 ---
 title: "Research & Publications"
 description: |
-  Research in neuroscience and developmental biology.
+  Previous research in neuroscience and developmental biology.
 output:
   distill::distill_article:
     toc: true
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Overview
 
-I use zebrafish to investigate development and function of glial cells of the central nervous system. Zebrafish are small, transparent vertebrates that develop quickly. Here is one at 24 hours post-fertilization (hpf) - I labeled the heart with green fluorescent protein.  
+Durign my graduate and postdoctoral training, I used zebrafish to investigate development and function of glial cells of the central nervous system. Zebrafish are small, transparent vertebrates that develop quickly. Here is one at 24 hours post-fertilization (hpf) - I labeled the heart with green fluorescent protein.  
 
 ![Zebrafish at 24 hpf.](zebheart.gif)  
   
