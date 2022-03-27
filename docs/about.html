@@ -56,7 +56,7 @@ code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,7 +77,7 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
@@ -85,30 +85,28 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
+
   <!--radix_placeholder_meta_tags-->
   <title>Alexandria N. Hughes, Ph.D.: About me</title>
   
-  <meta property="description" itemprop="description" content="Hi, I&#39;m Alex. I&#39;m a biostatistician &amp; neuroscientist and this is my personal website."/>
   
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Alexandria N. Hughes, Ph.D.: About me"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Hi, I&#39;m Alex. I&#39;m a biostatistician &amp; neuroscientist and this is my personal website."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Alexandria N. Hughes, Ph.D."/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Alexandria N. Hughes, Ph.D.: About me"/>
-  <meta property="twitter:description" content="Hi, I&#39;m Alex. I&#39;m a biostatistician &amp; neuroscientist and this is my personal website."/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About me"]},{"type":"character","attributes":{},"value":["Hi, I'm Alex. I'm a biostatistician & neuroscientist and this is my personal website.\n"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["About me"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -455,7 +453,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   
   </style>
   
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
   <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
@@ -1862,7 +1860,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -2181,7 +2182,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-color:       #015661;                   /* yellow f6d700 the top header strip text*/
     --text-size:        15px;
     --hover-color:      #f6d700;                   /* top header strip hover  */
-    --bkgd-color:       #ffffff;                      /* edited 05354b dark blue 015661 teal*/
+    --bkgd-color:       #fafafa;                      /* edited 05354b dark blue 015661 teal*/
   }
   
   .distill-site-footer {
@@ -2407,7 +2408,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About me","description":"Hi, I'm Alex. I'm a biostatistician & neuroscientist and this is my personal website.","authors":[]}
+{"title":"About me","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2424,9 +2425,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="nav-right">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
-<a href="CV_2021.pdf">CV</a>
+<a href="CV_2022.pdf">CV</a>
 <a href="research.html">Research</a>
-<a href="cauchy.html">Misc</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2439,14 +2439,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>About me</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Hi, I’m Alex. I’m a biostatistician &amp; neuroscientist and this is my personal website.</p></p>
+
 </div>
 
 
 <div class="d-article">
-<p>I received my PhD in Neuroscience at the University of Colorado Anschutz Medical Campus in September 2020 and then began graduate studies in Statistics at Texas A&amp;M University. I now get to provide statistical analysis support to researchers in public health, genomics, and epidemiology in my work as a biostatistician at Westat.</p>
-<p>My previous neuroscience research is described on my <a href="research.html">Research</a> page.</p>
-<p>I also really like <a href="misc.html">running</a>, <a href="cauchy.html">taking pictures of my cat</a>, <a href="page.html">painting</a> and scientific illustration, and board games. I built this website with the R package {Distill}, which you can learn more about <a href="https://rstudio.github.io/distill/">here</a>.</p>
+<p>I received my PhD in Neuroscience at the University of Colorado Anschutz Medical Campus in 2020 and then pursued further graduate studies in Statistics at Texas A&amp;M University. I’m now employed as a Senior Biostatistician at Westat, where I get to contribute to a range of projects in public health, epidemiology, and genomics.</p>
+<p>I love nothing more than helping out! If you think I can help you with anything - from stats to scientific illustration to image analysis to writing, or anything in between - please don’t hesitate to shoot me a quick email and say hello. My contact info is <a href="CV_2022.pdf">here</a>.</p>
+<p>I built this website with the R package {Distill}, which you can learn more about <a href="https://rstudio.github.io/distill/">here</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -2463,7 +2463,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <div class="distill-site-nav distill-site-footer">
-<p><img src="logo2021-foot.png" alt="oligo" /></br> <a href="hughesan.github.io">hughesan.github.io</a> </br> 2020-2021</p>
+<p><img src="logo2021-foot.png" alt="oligo" /></br> <a href="hughesan.github.io">hughesan.github.io</a> </br> 2020-2022</p>
 </div>
 <!--/radix_placeholder_navigation_after_body-->
 

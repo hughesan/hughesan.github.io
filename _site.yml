@@ -15,9 +15,8 @@ navbar:
     - text: "About"
       href: about.html
     - text: "CV"
-      href: CV_2021.pdf
+      href: CV_2022.pdf
     - text: "Research"
       href: research.html
-    - text: "Misc"
-      href: cauchy.html
+
 output: distill::distill_article

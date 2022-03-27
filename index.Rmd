@@ -14,17 +14,27 @@ knitr::opts_chunk$set(echo = FALSE)
 library(distill)
 ```
 
-![Microglia exploring the zebrafish spinal cord over ~3 hours.](surveying-spinal-cord.gif)
+
+
+```{r, out.width=400, fig.align='center'}
+knitr::include_graphics("gluunc.gif")
+
+```
+
+<center><font size="2"> Microglia in live larval zebrafish brain (UV glutamate uncaging at time & position </br> indicated by closed circle; time in minutes; optic tectum)</font> </center>
+
 
 # Quick links + contact
 
-[CV](CV_2021.pdf)
+[CV](CV_2022.pdf)
 
 [Google Scholar](https://scholar.google.com/citations?hl=en&user=wRo5MvAAAAAJ&view_op=list_works&sortby=pubdate)
 
 [ORCID](https://orcid.org/0000-0003-3922-7045)
 
 [Github](https://github.com/hughesan)
+
+[LinkedIn](https://www.linkedin.com/in/alexandria-hughes-phd/)
 
 
 [Twitter](https://twitter.com/alexnhughes?lang=en)
