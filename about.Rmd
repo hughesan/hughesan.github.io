@@ -9,9 +9,9 @@ title: "About me"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-I received my PhD in Neuroscience at the University of Colorado Anschutz Medical Campus in 2020 and then pursued further graduate studies in Statistics at Texas A&M University. I'm now employed as a Senior Biostatistician at Westat, where I get to contribute to a range of projects in public health, epidemiology, and genomics.
+I'm a Mathematical Statistician at the National Science Foundation (views here are mine!). I received my PhD in Neuroscience at the University of Colorado Anschutz Medical Campus in 2020 and then pursued further graduate studies in Statistics at Texas A&M University during postdocs at both CU Anschutz and the NIH. More about that journey [here](https://www.science.org/content/article/search-backup-career-plan-i-found-perfect-fit).
 
-I love nothing more than helping out! If you think I can help you with anything - from stats to scientific illustration to image analysis to writing, or anything in between - please don't hesitate to shoot me a quick email and say hello. My contact info is [here](CV_2022.pdf).
+My contact info is [here](CV_2023.pdf).
 
 
 

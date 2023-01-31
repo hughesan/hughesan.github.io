@@ -1,7 +1,7 @@
 ---
 title: "Welcome!"
 description: |
-  Hi, I'm Alex. I'm a biostatistician & neuroscientist and this is my personal website.
+  Hi, I'm Alex. I'm a statistician & neuroscientist and this is my personal website.
 site: distill::distill_website
 ---
 
@@ -26,13 +26,12 @@ knitr::include_graphics("gluunc.gif")
 
 # Quick links + contact
 
-[CV](CV_2022.pdf)
+[CV](CV_2023.pdf)
 
 [Google Scholar](https://scholar.google.com/citations?hl=en&user=wRo5MvAAAAAJ&view_op=list_works&sortby=pubdate)
 
 [ORCID](https://orcid.org/0000-0003-3922-7045)
 
-[Github](https://github.com/hughesan)
 
 [LinkedIn](https://www.linkedin.com/in/alexandria-hughes-phd/)
 

@@ -1,7 +1,7 @@
 ---
-title: "Research & Publications"
+title: "Research, publications, and other writing"
 description: |
-  Previous research in neuroscience and developmental biology.
+  
 output:
   distill::distill_article:
     toc: true
@@ -13,9 +13,19 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Overview
+# Current (2021 - present)
 
-Durign my graduate and postdoctoral training, I used zebrafish to investigate development and function of glial cells of the central nervous system. Zebrafish are small, transparent vertebrates that develop quickly. Here is one at 24 hours post-fertilization (hpf) - I labeled the heart with green fluorescent protein.  
+More coming soon!
+
+Andrey Andreev, Valerie Komatsu, Paula Almiron, Kasey Rose, Maurice Y Lee, and I collected resources and created guidance for onboarding new lab members: [Paper link](https://doi.org/10.7554/eLife.79627)
+
+I wrote a piece for Science about my decision to leave an academic career path in neuroscience in favor of a career in statistics: [Paper link](doi.org/10.1126/science.caredit.abq4104)
+
+
+
+# Graduate and postdoctoral research (2015-2021)
+
+During my graduate and postdoctoral training, I used zebrafish to investigate development and function of glial cells of the central nervous system. Zebrafish are small, transparent vertebrates that develop quickly. Here is one at 24 hours post-fertilization (hpf) - I labeled the heart with green fluorescent protein.  
 
 ![Zebrafish at 24 hpf.](zebheart.gif)  
   
@@ -51,7 +61,7 @@ myelination. *Nature Neuroscience*, 23, 1055–1066.
 
 ![Microglia in the larval optic tectum.](gif-tectal-mg.gif) 
 
-# Previous work & undergraduate research
+# Previous work & undergraduate research (2013 - 2015)
 
 During my first year of graduate school, I wrote a journal club-style review about the relationship between Schwann cells and motor neuron axon arborization with my peers Alison Hixon and Megan Josey.
 
