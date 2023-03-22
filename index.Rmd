@@ -36,7 +36,7 @@ knitr::include_graphics("gluunc.gif")
 [LinkedIn](https://www.linkedin.com/in/alexandria-hughes-phd/)
 
 
-[Twitter](https://twitter.com/alexnhughes?lang=en)
+[Twitter](https://twitter.com/alxhug?lang=en)
 
 [Redbubble art shop](https://www.redbubble.com/people/alexandglia/shop?asc=u)
   
