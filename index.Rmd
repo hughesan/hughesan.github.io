@@ -26,7 +26,7 @@ knitr::include_graphics("gluunc.gif")
 
 # Quick links + contact
 
-[CV](CV_2023.pdf)
+[CV](CV_2024.pdf)
 
 [Google Scholar](https://scholar.google.com/citations?hl=en&user=wRo5MvAAAAAJ&view_op=list_works&sortby=pubdate)
 
