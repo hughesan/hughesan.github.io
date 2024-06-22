@@ -9,9 +9,9 @@ title: "About me"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-I'm a Mathematical Statistician at the National Science Foundation (views here are mine!). I received my PhD in Neuroscience at the University of Colorado Anschutz Medical Campus in 2020 and then pursued further graduate studies in Statistics at Texas A&M University during postdocs at both CU Anschutz and the NIH. More about that journey [here](https://www.science.org/content/article/search-backup-career-plan-i-found-perfect-fit).
+I'm a Data Scientist at the National Institutes of Health Clinical Center (views here are mine!). I received my PhD in Neuroscience at the University of Colorado Anschutz Medical Campus in 2020 and then completed an MS in Statistics at Texas A&M University during my postdocs at both CU Anschutz and the NIH. More about that journey [here](https://www.science.org/content/article/search-backup-career-plan-i-found-perfect-fit).
 
-My contact info is [here](CV_2023.pdf).
+My contact info is [here](CV_2024.pdf).
 
 
 
