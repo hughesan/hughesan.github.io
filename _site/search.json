@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "alxhug-blog",
+    "section": "",
+    "text": "running\n\n\nstats\n\n\n\n\n\n\n\n\n\n\n\nDec 15, 2024\n\n\nAlex Hughes\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 12, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Where does VDOT come from, and what’s up with point estimates in pace prediction? Diving into sampling variability in running performances",
+    "section": "",
+    "text": "On the r/AdvancedRunning subreddit, a question that is frequently asked goes something like this: “I ran a marathon in 3:31 but my watch says I actually ran 26.57 miles, so did I run 26.2 in less than 3:30?” or closely related, “Do I enter my watch time and distance or the chip time and official course distance” into a race prediction/equivalent time calculator such as vdot.\nEvery time, in turn, the community offers a resounding no. Use the official time, and the official distance, and that’s the only information you’re allowed to take away from the day. You enter this singular time into the vdot calculator and it gives you singular paces back. For example, our 3:31 marathoner should do threshold work at 7:33 min/mi pace and could reasonably target a 45:52 10K.\nThere’s seemingly no room in this model of training for the concept of sampling variability, which is to say, if you could run a race multiple times in parallel, how much variation would there be in your finish times simply due to randomness? If we understand and account for this uncertainty, we can walk away from a race with a lot more information about our performance than singular training and target paces.\nMaybe you’ve run a packed race before where the first couple miles were heavily dictated by the crowd around you, but that same crowd also blocked the wind, and perhaps those slower early miles allowed you to pick it up later in the race. Chances are in this parallel experiment, your times would vary, but by how much?\n\n# mdsr::Cherry %>%o\n#   group_by(name.yob)"
+  }
+]
