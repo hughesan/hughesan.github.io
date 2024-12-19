@@ -1,0 +1,14 @@
+{
+  "hash": "f71832b3bdc6e48d394b46dde4bf0258",
+  "result": {
+    "markdown": "---\ntitle: \"Where does VDOT come from, and what's up with point estimates in pace prediction? Diving into sampling variability in running performances\"\nauthor: \"Alex Hughes\"\ndate: \"2024-12-15\"\ndate-modified: \"2024-12-15\"\ncategories: [running, stats]\nimage: \"image.jpg\"\ndraft: true\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(dplyr)\n```\n:::\n\n\nOn the r/AdvancedRunning subreddit, a question that is frequently asked goes something like this: \"I ran a marathon in 3:31 but my watch says I actually ran 26.57 miles, so did I run 26.2 in less than 3:30?\" or closely related, \"Do I enter my watch time and distance or the chip time and official course distance\" into a race prediction/equivalent time calculator such as [vdot](https://vdoto2.com/calculator/).\n\nEvery time, in turn, the community offers a resounding no. Use the official time, and the official distance, and that's the only information you're allowed to take away from the day. You enter this singular time into the vdot calculator and it gives you singular paces back. For example, our 3:31 marathoner should do threshold work at 7:33 min/mi pace and could reasonably target a 45:52 10K.  \n\nThere's seemingly no room in this model of training for the concept of sampling variability, which is to say, if you could run a race multiple times in parallel, how much variation would there be in your finish times simply due to randomness? If we understand and account for this uncertainty, we can hobble away from a race with a lot more information about our performance than singular training and target paces.  \n\nMaybe you've run a packed race before where the first couple miles were heavily dictated by the crowd around you, but that same crowd also blocked the wind, and perhaps those slower early miles allowed you to pick it up later in the race. Chances are in this parallel experiment, your times would vary, but by how much?  \n\n## What's known about this?\n\nSince we can't run races in parallel, there are two major considerations in studying repeated performance variability: the effect of fatigue if performances are close together in time, and the effect of age if performances are not so close together in time. Both apply.\n\nThere are a few papers that have attempted to measure variability in repeated performances. Hopkins & Hewson (2000) \n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# mdsr::Cherry %>%o\n#   group_by(name.yob) \n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
