@@ -9,7 +9,7 @@
 <meta name="author" content="Alex Hughes">
 <meta name="dcterms.date" content="2024-12-15">
 
-<title>alxhug-blog - Where does VDOT come from, and what’s up with point estimates in pace prediction? Diving into sampling variability in running performances</title>
+<title>alxhug-blog - Sampling variability in running performances</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -167,7 +167,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Where does VDOT come from, and what’s up with point estimates in pace prediction? Diving into sampling variability in running performances</h1>
+      <h1 class="title">Sampling variability in running performances</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">running</div>
                 <div class="quarto-category">stats</div>
@@ -210,11 +210,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>On the r/AdvancedRunning subreddit, a question that is frequently asked goes something like this: “I ran a marathon in 3:31 but my watch says I actually ran 26.57 miles, so did I run 26.2 in less than 3:30?” or closely related, “Do I enter my watch time and distance or the chip time and official course distance” into a race prediction/equivalent time calculator such as <a href="https://vdoto2.com/calculator/">vdot</a>.</p>
 <p>Every time, in turn, the community offers a resounding no. Use the official time, and the official distance, and that’s the only information you’re allowed to take away from the day. You enter this singular time into the vdot calculator and it gives you singular paces back. For example, our 3:31 marathoner should do threshold work at 7:33 min/mi pace and could reasonably target a 45:52 10K.</p>
-<p>There’s seemingly no room in this model of training for the concept of sampling variability, which is to say, if you could run a race multiple times in parallel, how much variation would there be in your finish times simply due to randomness? If we understand and account for this uncertainty, we can hobble away from a race with a lot more information about our performance than singular training and target paces.</p>
-<p>Maybe you’ve run a packed race before where the first couple miles were heavily dictated by the crowd around you, but that same crowd also blocked the wind, and perhaps those slower early miles allowed you to pick it up later in the race. Chances are in this parallel experiment, your times would vary, but by how much?</p>
+<p>There’s seemingly no room in this model of training for the concept of sampling variability, which is to say, if you could run a race multiple times in parallel, how much variation would there be in your finish times simply due to randomness? Maybe you’ve run a packed race before where the first couple miles were heavily dictated by the crowd around you, but that same crowd also blocked the wind, and perhaps those slower early miles allowed you to pick it up later in the race. Chances are that in a different place in the crowd, your finish time would be different, but by how much? If we understand and account for this uncertainty, we can hobble away from a race with a lot more information about our performance than singular training and target paces.</p>
 <section id="whats-known-about-this" class="level2">
 <h2 class="anchored" data-anchor-id="whats-known-about-this">What’s known about this?</h2>
-<p>Since we can’t run races in parallel, there are two major considerations in studying repeated performance variability: the effect of fatigue if performances are close together in time, and the effect of age if performances are not so close together in time. Both apply.</p>
+<p>Since we can’t run races in parallel, there are two considerations in studying repeated performance variability: the effect of fatigue if performances are close together in time, and the effect of age if performances are not so close together in time. To any real repeated performances both of these will apply.</p>
 <p>There are a few papers that have attempted to measure variability in repeated performances. Hopkins &amp; Hewson (2000)</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mdsr::Cherry %&gt;%o</span></span>

@@ -1,8 +1,8 @@
 ---
-title: "Where does VDOT come from, and what's up with point estimates in pace prediction? Diving into sampling variability in running performances"
+title: "Sampling variability in running performances"
 author: "Alex Hughes"
-date: "2024-12-15"
-date-modified: "2024-12-15"
+date: "2024-12-20"
+date-modified: "2024-12-21"
 categories: [running, stats]
 image: "image.jpg"
 draft: true
@@ -16,13 +16,11 @@ On the r/AdvancedRunning subreddit, a question that is frequently asked goes som
 
 Every time, in turn, the community offers a resounding no. Use the official time, and the official distance, and that's the only information you're allowed to take away from the day. You enter this singular time into the vdot calculator and it gives you singular paces back. For example, our 3:31 marathoner should do threshold work at 7:33 min/mi pace and could reasonably target a 45:52 10K.  
 
-There's seemingly no room in this model of training for the concept of sampling variability, which is to say, if you could run a race multiple times in parallel, how much variation would there be in your finish times simply due to randomness? If we understand and account for this uncertainty, we can hobble away from a race with a lot more information about our performance than singular training and target paces.  
-
-Maybe you've run a packed race before where the first couple miles were heavily dictated by the crowd around you, but that same crowd also blocked the wind, and perhaps those slower early miles allowed you to pick it up later in the race. Chances are in this parallel experiment, your times would vary, but by how much?  
+There's seemingly no room in this model of training for the concept of sampling variability, which is to say, if you could run a race multiple times in parallel, how much variation would there be in your finish times simply due to randomness? Maybe you've run a packed race before where the first couple miles were heavily dictated by the crowd around you, but that same crowd also blocked the wind, and perhaps those slower early miles allowed you to pick it up later in the race. Chances are that in a different place in the crowd, your finish time would be different, but by how much? If we understand and account for this uncertainty, we can hobble away from a race with a lot more information about our performance than singular training and target paces.  
 
 ## What's known about this?
 
-Since we can't run races in parallel, there are two major considerations in studying repeated performance variability: the effect of fatigue if performances are close together in time, and the effect of age if performances are not so close together in time. Both apply.
+Since we can't run races in parallel, there are two considerations in studying repeated performance variability: the effect of fatigue if performances are close together in time, and the effect of age if performances are not so close together in time. To any real repeated performances both of these will apply.
 
 There are a few papers that have attempted to measure variability in repeated performances. Hopkins & Hewson (2000) 
 

@@ -2,14 +2,16 @@ project:
   type: website
 
 website:
-  title: "alxhug-blog"
+  title: "My blog"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/hughesan
+      - icon: cloud-lightning-rain
+        href: https://alxhug.bsky.social/
+      - icon: strava
+        href: https://www.strava.com/athletes/alxhug
 format:
   html:
     theme: united
