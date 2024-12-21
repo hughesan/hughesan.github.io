@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>alxhug-blog</title>
+<title>My blog - alxhug-blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -103,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">alxhug-blog</span>
+    <span class="navbar-title">My blog</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -115,12 +115,17 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./about.html">About</a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/hughesan"><i class="bi bi-github" role="img">
 </i> 
  </a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://alxhug.bsky.social/"><i class="bi bi-cloud-lightning-rain" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.strava.com/athletes/alxhug"><i class="bi bi-strava" role="img">
 </i> 
  </a>
   </li>  
@@ -151,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="running">running <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="running">running <span class="quarto-category-count">(2)</span></div><div class="category" data-category="stats">stats <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -164,7 +169,52 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="running" data-listing-date-sort="1734411600000" data-listing-file-modified-sort="1734745271258" data-listing-reading-time-sort="5.12">
+<div class="quarto-post image-right" data-index="0" data-categories="running,stats" data-listing-date-sort="1734670800000" data-listing-file-modified-sort="1734818502793" data-listing-reading-time-sort="1.755">
+<div class="thumbnail">
+<p><a href="./posts/running-variability/index.html"> <img src="./posts/running-variability/image.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/running-variability/index.html">
+<h3 class="no-anchor listing-title">
+Sampling variability in running performances
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('running'); return false;">
+running
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('stats'); return false;">
+stats
+</div>
+</div>
+<a href="./posts/running-variability/index.html">
+<div class="listing-description">
+On the r/AdvancedRunning subreddit, a question that is frequently asked goes something like this: “I ran a marathon in 3:31 but my watch says I actually ran 26.57 miles, so did I run 26.2 in less than 3:30?” or closely related, “Do I enter my watch time and distance or the chip time and official course distance” into a race prediction/equivalent time calculator such as vdot.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/running-variability/index.html">
+<div class="listing-date">
+Dec 20, 2024
+</div>
+<div class="listing-author">
+Alex Hughes
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="running" data-listing-date-sort="1734411600000" data-listing-file-modified-sort="1734745271258" data-listing-reading-time-sort="5.12">
+<div class="thumbnail">
+<a href="./posts/welcome/index.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./posts/welcome/index.html"></a></p>
+</div>
 <div class="body">
 <a href="./posts/welcome/index.html">
 <h3 class="no-anchor listing-title">
