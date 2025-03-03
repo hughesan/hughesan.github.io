@@ -4,15 +4,21 @@ author: "Alex Hughes"
 date: "2025-1-19"
 date-modified: "2025-1-19"
 categories: [running, analysis]
+execute:
+  echo: false
+  message: false
+  warning: false
 draft: true
 ---
 
-```{r echo=FALSE, message=FALSE}
+```{r}
 library(dplyr)
 library(ggplot2)
+
+theme_set(theme_bw(base_size = 16))
 ```
 
-```{r message=FALSE}
+```{r}
 gdata <- readr::read_csv("C:/Users/Alex/Documents/R-2025/garmin_2023_2024/runs_2023_2024.csv")
 ```
 
@@ -31,16 +37,38 @@ df <- gdata %>%
          stride_len = `Avg Stride Length`,
          power = `Avg Power`) %>%
   mutate(Race = ifelse(Title == "Run! Geek! Run! 5k" | Title == "Richmond Marathon" | Title == "Army Ten Miler" | Title == "Eugene - Eugene Marathon (Euene Marathon)" | (Title == "Washington Running" & Date == "2024-04-07") | Title == "Rock n Roll Half" | Title == "Washington - FITDC Fresh Start 5k", 1, 0)) %>%
-  select(-pace_sec, -pace_min)
+  select(-pace_sec, -pace_min) %>%
+  mutate(across(
+    c(gct, cadence, stride_len, power, avg_HR, max_HR),
+    ~ as.numeric(.x)
+  ))
                         
 ```
 
-# EDA
+# Ground contact time
 
 ```{r}
-ggplot(df, aes(x = Date, y = gct, color = factor(Race))) +
+# plot(lowess(df$gct))
+# 
+# df2 <- df %>%
+#   group_by(Date) %>%
+#   filter(Distance == max(Distance)) %>%
+#   mutate(date_num = as.numeric(Date))
+# 
+# ggplot(df, aes(x = Date, y = gct)) +
+#   geom_smooth(span = 0.85)
+```
+
+
+```{r}
+ggplot(df, aes(x = Date, y = gct, color = factor(Race), size = factor(Race))) +
   geom_point() +
-  scale_y_discrete(breaks = seq(195, 275, by = 5)) +
-  labs(y = "Average ground contact time (GCT)")
+  geom_smooth(inherit.aes = FALSE, aes(x = Date, y = gct), method = "gam") +
+  scale_y_continuous(breaks = seq(180, 275, by = 10), limits = c(min(df$gct, na.rm = TRUE), max(df$gct, na.rm = TRUE))) +
+  scale_color_viridis_d(begin = 0.1, end = 0.9, direction = -1, labels = c("Training run", "Race")) +
+  scale_size_manual(values = c(2, 4), guide = "none")+
+  labs(y = "Avg ground contact time (ms)", color = "", x = "") +
+  theme(panel.grid = element_blank(), legend.position = "top") +
+  annotate("text", x = as.Date("2024-11-16"), y = 230, label = "Richmond Marathon")
 ```
 

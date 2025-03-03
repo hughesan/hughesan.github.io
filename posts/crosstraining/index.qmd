@@ -1,0 +1,19 @@
+---
+title: "Cross-training"
+author: "Alex Hughes"
+date: "2025-1-10"
+date-modified: "2025-1-10"
+categories: [running, injury, primary-lit]
+image: "image.jpg"
+draft: true
+---
+
+I'm still injured, so I'm cross-training. After a few days of halfhearted pedaling on the stationary bike until I got tired, I decided that I needed a structured approach to replacing running with cardio. Here's what I've learned about designing an efficient cross-training plan.
+
+## Why cross-train?
+
+When not running, we gradually lose 1) cardiovascular fitness (lactate threshold, VO2max) and 2) running economy. Cross-training offers support for (1) but less support for (2) due to the principle of specificity - simply, these activities don't challenge the body in the exact same way as running. Some cross-training options, like the elliptical or aqua-jogging, more closely mimic running form, but they fall short of mimicking the effect of impact (for many, this is why they make good cross-training options to begin with).
+
+There is a nifty table in the Daniel's Running Formula book that tells you how much of your VDOT you're going to lose during different length absences from running, expressed as a proportion of pre-break VDOT. The compelling part of this table is the second column, which offers you a much improved decline if you cross-train. Across the board, the proportions with cross-training are much better. For example, after 5 weeks of no running, VDOT is estimated to fall by 9%, but with cross-training the estimate is just a 4.5% decrease; for 72 days off running, a fall of 20% is ameliorated to 10% with cross-training.
+
+But: the book doesn't say how much cross-training is necessary to achieve this benefit.

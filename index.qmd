@@ -1,5 +1,5 @@
 ---
-title: "alxhug-blog"
+title: "the blog with no name"
 listing:
   contents: posts
   sort: "date desc"

@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "alxhug-blog",
+    "title": "the blog with no name",
     "section": "",
-    "text": "running\n\n\nstats\n\n\n\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\nAlex Hughes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nrunning\n\n\n\n\n\n\n\n\n\n\n\nDec 17, 2024\n\n\nAlex Hughes\n\n\n\n\n\n\nNo matching items"
+    "text": "injury\n\n\n\n\n\n\n\n\n\n\n\nFeb 24, 2025\n\n\nAlex Hughes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nrunning\n\n\n\n\n\n\n\n\n\n\n\nDec 17, 2024\n\n\nAlex Hughes\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -56,17 +56,38 @@
     "text": "What about strength work?\nFor the past couple years I have been in a good groove with strength training and generally train 3x per week following shorter runs. There are different perspectives on when to schedule strength work, but a more common viewpoint is that “easy days should be easy, and hard days should be hard”, i.e. do strength training after speedwork or an otherwise hard run. I’m not going to challenge this directly, but over time I have found myself favoring strength work on short days for reasons of both time management and load management.\nOne of the challenges of Pfitz 18/70 vs 18/55 is the number and placement of the workout days (by which I mean anything that isn’t a recovery run). Generally, 18/70 has 4-5 workout days per week, and most of these are medium-long or long runs. I generally don’t have time to add 30-50 minutes of strength work after 1h30 - 2h of running. But it’s also said that strength work shouldn’t take place the day before speedwork or a long run, which knocks out most of the days of the week.\nI’m tentatively going to continue doing strength work on recovery days, because it has worked for me this far and I’m almost never sore to a point that my running is compromised. I’ll probably do a post about strength training at some point because I’ve come to really enjoy it."
   },
   {
-    "objectID": "posts/running-variability/index.html",
-    "href": "posts/running-variability/index.html",
-    "title": "Sampling variability in running performances",
+    "objectID": "posts/it-band-strategies/index.html",
+    "href": "posts/it-band-strategies/index.html",
+    "title": "A collection of IT Band Syndrome strategies",
     "section": "",
-    "text": "library(dplyr)\nOn the r/AdvancedRunning subreddit, a question that is frequently asked goes something like this: “I ran a marathon in 3:31 but my watch says I actually ran 26.57 miles, so did I run 26.2 in less than 3:30?” or closely related, “Do I enter my watch time and distance or the chip time and official course distance” into a race prediction/equivalent time calculator such as vdot.\nEvery time, in turn, the community offers a resounding no. Use the official time, and the official distance, and that’s the only information you’re allowed to take away from the day. You enter this singular time into the vdot calculator and it gives you singular paces back. For example, our 3:31 marathoner should do threshold work at 7:33 min/mi pace and could reasonably target a 45:52 10K.\nThere’s seemingly no room in this model of training for the concept of sampling variability, which is to say, if you could run a race multiple times in parallel, how much variation would there be in your finish times simply due to randomness? Maybe you’ve run a packed race before where the first couple miles were heavily dictated by the crowd around you, but that same crowd also blocked the wind, and perhaps those slower early miles allowed you to pick it up later in the race. Chances are that in a different place in the crowd, your finish time would be different, but by how much? If we understand and account for this uncertainty, we can hobble away from a race with a lot more information about our performance than singular training and target paces."
+    "text": "Thanks to my IT band, it has been 9 weeks since I have gone on a real run. My IT band syndrome (ITBS) started suddenly - there was no warning period where runs repeatedly started to hurt after a set amount of time or distance. One day, a short, easy run was slightly uncomfortable from the onset, and afterward I had severe knee pain on my first (and only) step down a flight of stairs. After 9 weeks of spinning my wheels I think I am possibly, agonizingly slowly emerging from this pit of despair and want to catalog the approaches that I’ve tried.\nDuring this time I’ve been doing the standard ITBS PT exercises - side-lying leg raises, etc - and scouring the forums for anything that anyone has ever said was beneficial for their ITBS. Since there are so many different potential causes of ITBS, you never know what might help your particular case. Here are some of my favorite unconventional finds to complement PT for an all-out spaghetti-at-the-wall approach to ITBS."
   },
   {
-    "objectID": "posts/running-variability/index.html#whats-known-about-this",
-    "href": "posts/running-variability/index.html#whats-known-about-this",
-    "title": "Sampling variability in running performances",
-    "section": "What’s known about this?",
-    "text": "What’s known about this?\nSince we can’t run races in parallel, there are two considerations in studying repeated performance variability: the effect of fatigue if performances are close together in time, and the effect of age if performances are not so close together in time. To any real repeated performances both of these will apply.\nThere are a few papers that have attempted to measure variability in repeated performances. Hopkins & Hewson (2000)\n\n# mdsr::Cherry %>%o\n#   group_by(name.yob)"
+    "objectID": "posts/it-band-strategies/index.html#unusual-strategies-for-itbs",
+    "href": "posts/it-band-strategies/index.html#unusual-strategies-for-itbs",
+    "title": "A collection of IT Band Syndrome strategies",
+    "section": "Unusual strategies for ITBS",
+    "text": "Unusual strategies for ITBS\n\nSink plunger\nA sink plunger ($4 at a hardware store) can be used to lift and move the IT band. It definitely feels interesting. This technique was more valuable to me for understanding where the structure is in my own leg vs viewing anatomy diagrams on the internet - more of a body awareness lesson than a miracle cure. Proponents of the plunger/cupping strategy claim that the IT band is adhered to the lateral quad muscle and lifting the ITB can help loosen these adhesions.\nSources: reddit, Youtube\n\n\n“Walt Reynolds’ ITB Special”\nThis is a unique exercise that mimics the running hip motion that stresses the IT band. Be warned that it can provoke ITBS pain, though I only had (fleeting) pain with it once. After discovering this exercise in Sports Performance Bulletin, I was surprised to find very little further information about it beyond stray posts on some older forums and one blog post.\nSources: Sports Performance Bulletin, helpful photo guide here\n\n\nScraping\nIs it woo? I don’t know. I first learned about Graston scraping when I had a hamstring injury a couple of years ago and it gave me some relief then. At the time I had purchased a bow-shaped scraper similar to the one used in the Sidekick IT band scraping videos linked below.\nSources: Sidekick\n\n\nIT band strap\nMy ortho suggested I try running with an IT band strap. The reasoning is that pressure stabilizes the IT band so it can’t rub against the femur and cause pain. But it seems that this may not be the source of pain in ITBS anyway (see More fun reading, below). I did try the IT strap on a couple of runs and maybe coincidentally these runs were better than usual. I eventually got annoyed with the strap because it was frequently either too loose and sliding around a bit or squeezing my hamstring uncomfortably.\n\n\nSideways walking on a treadmill with incline\nAfter a treadmill incline walking session - which can be a great way to painlessly engage all of the running muscles without actually running - I have been following this tip to slow the treadmill down to ~1.3 mph, set the incline to 5%, and walk sideways for a couple of minutes on each side. I actually find this to be more challenging leading with my “good” side.\nSources: Runner’s World\n\n\nThe Balanced Runner lessons\nThe Balanced Runner (Jae Gruenke) has some free lessons for people struggling with IT band syndrome. These lessons are somewhat unusual in that you perform directed movements that are supposed to improve your running form, but the connections between the movements and running are not at all obvious. I found myself wanting the punchline after every instruction and the level of explanation was a bit dissatisfying. Still, I couldn’t help but notice that I did feel “better” in some mysterious way walking around after the lesson, which is why I link information about the lesson here.\nSources: The Balanced Runner"
+  },
+  {
+    "objectID": "posts/it-band-strategies/index.html#a-couple-of-my-own-tips",
+    "href": "posts/it-band-strategies/index.html#a-couple-of-my-own-tips",
+    "title": "A collection of IT Band Syndrome strategies",
+    "section": "A couple of my own tips",
+    "text": "A couple of my own tips\n\nSide-sleepers, consider changing the side you sleep on\nI’m a side-sleeper and the side I typically sleep on is my non-ITBS side (ITBS leg is stacked on top). During the worst weeks of my ITBS, I was having knee pain in the night that would wake me up. One time the pain was so bad that I rolled out of bed at 1:30am to book another appointment with my ortho. I found that I was able to switch to sleeping on the ITBS side and the pain stopped waking me up in the night. This probably varies a lot by case - I don’t have very much pressure sensitivity on the outside of my knee so I can rest on it comfortably, but others may not.\nIn any case, changing the side you sleep on, and by extension noticing and switching up any other asymmetrical postures you find yourself in for long stretches of time may be worth exploring.\n\n\nWalking backwards down stairs\nWalking down stairs backwards is how I’ve been getting down stairs. It’s much less painful than going down stairs the normal way. Try it."
+  },
+  {
+    "objectID": "posts/it-band-strategies/index.html#sources-for-more-standard-strategies",
+    "href": "posts/it-band-strategies/index.html#sources-for-more-standard-strategies",
+    "title": "A collection of IT Band Syndrome strategies",
+    "section": "Sources for more standard strategies",
+    "text": "Sources for more standard strategies\n\nI followed E3 Rehab’s plan for strength training\nSquat University ITBS guide\nStanding pigeon gives me instant pain relief\nGetting a lacrosse ball to roll the TFL and glutes felt like a game-changer - example of how to roll the TFL in this video by Dr. Kristie Ennis"
+  },
+  {
+    "objectID": "posts/it-band-strategies/index.html#more-fun-reading",
+    "href": "posts/it-band-strategies/index.html#more-fun-reading",
+    "title": "A collection of IT Band Syndrome strategies",
+    "section": "More fun reading",
+    "text": "More fun reading\nIn this paper by Paul Geisler, I learned that humans are the only animals with IT bands and we do not have them at birth - they develop in response to the stress of weight-bearing when we begin walking.\nIn this paper the premise that the IT band moving over the lateral knee as the source of pain is challenged, and it is instead suggested that the pain comes from the compression of a highly innervated fat pad that sits under the ITB. My impression is that most of the general “IT band help” articles out there still state that the IT band moves/rubs against the femur but a handful do mention the fat pad as a source of pain."
   }
 ]

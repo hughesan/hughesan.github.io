@@ -1,0 +1,78 @@
+---
+title: "A collection of IT Band Syndrome strategies"
+author: "Alex Hughes"
+date: "2025-2-24"
+date-modified: "2025-2-27"
+categories: [injury]
+draft: false
+---
+
+### The IT band is not a muscle, it is ~~fascia~~ *fascist*
+
+Thanks to my IT band, it has been 9 weeks since I have gone on a real run. My IT band syndrome (ITBS) started suddenly - there was no warning period where runs repeatedly started to hurt after a set amount of time or distance. One day, a short, easy run was slightly uncomfortable from the onset, and afterward I had severe knee pain on my first (and only) step down a flight of stairs. After 9 weeks of spinning my wheels I think I am possibly, agonizingly slowly emerging from this pit of despair and want to catalog the approaches that I've tried.
+
+During this time I've been doing the standard ITBS PT exercises - side-lying leg raises, etc - and scouring the forums for anything that anyone has ever said was beneficial for their ITBS. Since there are so many different potential causes of ITBS, you never know what might help your particular case. Here are some of my favorite unconventional finds to complement PT for an all-out spaghetti-at-the-wall approach to ITBS.
+
+## Unusual strategies for ITBS
+### Sink plunger
+
+A sink plunger ($4 at a hardware store) can be used to lift and move the IT band. It definitely feels interesting. This technique was more valuable to me for understanding where the structure is in my own leg vs viewing anatomy diagrams on the internet - more of a body awareness lesson than a miracle cure. Proponents of the plunger/cupping strategy claim that the IT band is adhered to the lateral quad muscle and lifting the ITB can help loosen these adhesions.
+
+Sources: [reddit](https://www.reddit.com/r/running/comments/2yiejz/true_story_i_just_used_a_sink_plunger_to_suction/), [Youtube](https://youtu.be/Wwtw7-GUK6I)
+  
+### "Walt Reynolds' ITB Special"
+
+This is a unique exercise that mimics the running hip motion that stresses the IT band. Be warned that it can provoke ITBS pain, though I only had (fleeting) pain with it once. After discovering this exercise in Sports Performance Bulletin, I was surprised to find very little further information about it beyond stray posts on some older forums and one blog post.
+
+Sources: [Sports Performance Bulletin](https://www.sportsperformancebulletin.com/injuries-health/knee-injuries-how-iliotibial-band-syndrome-can-ruin-the-runner), helpful photo guide [here](https://onemillionruns.blogspot.com/2006/10/walt-reynolds-itb-special.html)
+
+### Scraping
+
+Is it woo? I don't know. I first learned about Graston scraping when I had a hamstring injury a couple of years ago and it gave me some relief then. At the time I had purchased a bow-shaped scraper similar to the one used in the Sidekick IT band scraping videos linked below. 
+
+Sources: [Sidekick](https://learn.sidekicktool.com/lesson/it-band-pain)
+  
+### IT band strap
+
+My ortho suggested I try running with an IT band strap. The reasoning is that pressure stabilizes the IT band so it can't rub against the femur and cause pain. But it seems that this may not be the source of pain in ITBS anyway (see [More fun reading](#more-fun-reading), below). I did try the IT strap on a couple of runs and maybe coincidentally these runs were better than usual. I eventually got annoyed with the strap because it was frequently either too loose and sliding around a bit or squeezing my hamstring uncomfortably.
+
+### Sideways walking on a treadmill with incline
+
+After a treadmill incline walking session - which can be a great way to painlessly engage all of the running muscles without actually running - I have been following this tip to slow the treadmill down to ~1.3 mph, set the incline to 5%, and walk sideways for a couple of minutes on each side. I actually find this to be more challenging leading with my "good" side. 
+
+Sources: [Runner's World](https://www.runnersworld.com/health-injuries/a20856781/how-to-prevent-it-band-syndrome/)
+  
+### The Balanced Runner lessons
+
+The Balanced Runner (Jae Gruenke) has some free lessons for people struggling with IT band syndrome. These lessons are somewhat unusual in that you perform directed movements that are supposed to improve your running form, but the connections between the movements and running are not at all obvious. I found myself wanting the punchline after every instruction and the level of explanation was a bit dissatisfying. Still, I couldn't help but notice that I did feel "better" in some mysterious way walking around after the lesson, which is why I link information about the lesson here.
+
+Sources: [The Balanced Runner](https://www.balancedrunner.com/how-to-fix-your-it-bands/)
+
+## A couple of my own tips
+### Side-sleepers, consider changing the side you sleep on
+
+I'm a side-sleeper and the side I typically sleep on is my non-ITBS side (ITBS leg is stacked on top). During the worst weeks of my ITBS, I was having knee pain in the night that would wake me up. One time the pain was so bad that I rolled out of bed at 1:30am to book another appointment with my ortho. I found that I was able to switch to sleeping on the ITBS side and the pain stopped waking me up in the night. This probably varies a lot by case - I don't have very much pressure sensitivity on the outside of my knee so I can rest on it comfortably, but others may not.
+
+In any case, changing the side you sleep on, and by extension noticing and switching up any other asymmetrical postures you find yourself in for long stretches of time may be worth exploring.
+  
+### Walking backwards down stairs
+
+Walking down stairs backwards is how I've been getting down stairs. It's much less painful than going down stairs the normal way. Try it.
+
+  
+## Sources for more standard strategies
+
+  + I followed [E3 Rehab's plan](https://e3rehab.com/itband/) for strength training
+  
+  + Squat University ITBS [guide](https://squatuniversity.com/2017/05/30/how-to-fix-it-band-pain/)
+  
+  + [Standing pigeon](https://youtu.be/mlYM3KWwrGY) gives me instant pain relief 
+  
+  + Getting a lacrosse ball to roll the TFL and glutes felt like a game-changer - example of how to roll the TFL in this video by [Dr. Kristie Ennis](https://youtu.be/GI1MB2eii-8)
+
+## More fun reading
+
+In [this paper](https://doi.org/10.4085/1062-6050-548-19) by Paul Geisler, I learned that humans are the only animals with IT bands and we do not have them at birth - they develop in response to the stress of weight-bearing when we begin walking.
+
+In [this paper](https://doi.org/10.1016/j.jsams.2006.05.017) the premise that the IT band moving over the lateral knee as the source of pain is challenged, and it is instead suggested that the pain comes from the compression of a highly innervated fat pad that sits under the ITB. My impression is that most of the general "IT band help" articles out there still state that the IT band moves/rubs against the femur but a handful do mention the fat pad as a source of pain.
+

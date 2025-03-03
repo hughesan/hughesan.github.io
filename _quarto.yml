@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "My blog"
+  title: "the aut of running"
   navbar:
     right:
       - about.qmd
