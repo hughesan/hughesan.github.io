@@ -1,5 +1,5 @@
 ---
-title: "Running in 2024"
+title: "Garmin running data in 2024"
 author: "Alex Hughes"
 date: "2025-1-19"
 date-modified: "2025-1-19"
@@ -8,6 +8,8 @@ execute:
   echo: false
   message: false
   warning: false
+  fig-width: 10
+  fig-height: 6
 draft: true
 ---
 
@@ -41,34 +43,88 @@ df <- gdata %>%
   mutate(across(
     c(gct, cadence, stride_len, power, avg_HR, max_HR),
     ~ as.numeric(.x)
-  ))
+  )) %>%
+  
+  group_by(week_num = lubridate::week(Date + 1)) %>% # changes week start from monday to sunday
+  mutate(week_dist = sum(Distance)) %>%
+  ungroup() 
                         
 ```
 
-# Ground contact time
+In 2024, I ran a total of 2404.7 miles over 338 days. The shape of my year was driven by two marathon training cycles: a 16-week cycle for the Eugene Marathon at the end of April (4/28/24), and an 18-week cycle for the Richmond Marathon held in November (11/16/2024).
+
+<!-- note - need geom_text and geom_rect not annotate to put on specific facets - note geom_rect is a bunch of rects: https://stackoverflow.com/questions/11889625/annotating-text-on-individual-facet-in-ggplot2 -->
 
 ```{r}
-# plot(lowess(df$gct))
-# 
-# df2 <- df %>%
-#   group_by(Date) %>%
-#   filter(Distance == max(Distance)) %>%
-#   mutate(date_num = as.numeric(Date))
-# 
-# ggplot(df, aes(x = Date, y = gct)) +
-#   geom_smooth(span = 0.85)
+
+df_long <- df %>%
+   filter(avg_pace_s < 700 & Distance > 1) %>%
+         tidyr::pivot_longer(cols = c(Distance, week_dist),
+                             names_to = "dist_type",
+                             values_to = "miles") %>%
+  mutate(facet_label = ifelse(dist_type == "Distance", "Daily miles", "Weekly miles"))
+
+ggplot(df_long,
+       aes(x = Date, y = miles)) +
+  
+  facet_grid(vars(facet_label), scales = "free", switch = "y")+
+ 
+  geom_rect(data = filter(df_long, dist_type == "Distance" & Race == 1), xmin = as.Date("2024-01-07"), xmax = as.Date("2024-04-28"), ymin = 0, ymax = 28, fill = "#2a7b8e", alpha = 0.05) +
+  geom_rect(data = filter(df_long, dist_type == "week_dist" & Race == 1), xmin = as.Date("2024-01-07"), xmax = as.Date("2024-04-28"), ymin = 0, ymax = 68, fill = "#2a7b8e", alpha = 0.05) +
+  
+  geom_text(data = filter(df_long, dist_type == "Distance"), x = as.Date("2024-03-03"), y = 26.5, label = "Higdon Adv-1") +
+  geom_text(data = filter(df_long, dist_type == "Distance"), x = as.Date("2024-09-20"), y = 26.5, label = "Pfitz/Douglas 18/55") +
+  
+  geom_rect(data = filter(df_long, dist_type == "Distance" & Race == 1), xmin = as.Date("2024-07-21"), xmax = as.Date("2024-11-16"), ymin = 0, ymax = 28, fill = "#2a7b8e", alpha = 0.05) +
+  geom_rect(data = filter(df_long, dist_type == "week_dist" & Race == 1), xmin = as.Date("2024-07-21"), xmax = as.Date("2024-11-16"), ymin = 0, ymax = 68, fill = "#2a7b8e", alpha = 0.05) +
+  
+  geom_line(data = filter(df_long, dist_type == "week_dist")) +
+  geom_point(data = filter(df_long, dist_type == "Distance"), aes(shape = factor(Race)), size = 3) +
+  
+  scale_shape_manual(values = c(20, 8), guide = "none")+
+  
+  labs(x = "", y = "") +
+  
+   theme(
+    strip.placement = "outside",  # facet labels out
+    strip.text.y.left = element_text(angle = 0, face = "bold"),  # text horizontal, note .left
+    strip.background = element_blank(),  # remove facet box
+    panel.spacing = unit(1, "lines")  # adj spacing
+  ) +
+  
+  scale_x_date(date_breaks = "2 months", date_minor_breaks = "1 month", date_labels = "%B")
 ```
 
 
+### Ground contact time
+
+Ground contact time (GCT) is the amount of time the foot spends planted on the ground while running; reduce it and you garner free speed. I credit a simple plyometrics routine and a form cue to drive the feet downward when running with no active pulling up, instead letting forward swing be passive after hip extension (like a slingshot). I was happy to see it gradually decrease after I started implementing this cue around March.
+
+Inexplicably, my GCT started to deteriorate in the weeks before and especially after the Richmond Marathon. On many of these runs, both tapering and then slowly resuming running, I was telling myself to slow down (this was especially frustrating during the taper, because I felt fresh and couldn't seem to reign it in). 
+
+I do wonder if changing mechanics set the stage for my ITBS, which started in late December.
+
 ```{r}
 ggplot(df, aes(x = Date, y = gct, color = factor(Race), size = factor(Race))) +
-  geom_point() +
-  geom_smooth(inherit.aes = FALSE, aes(x = Date, y = gct), method = "gam") +
+  
+  geom_smooth(inherit.aes = FALSE, aes(x = Date, y = gct), method = "gam", se = FALSE, color = "#2a7b8e") +
   scale_y_continuous(breaks = seq(180, 275, by = 10), limits = c(min(df$gct, na.rm = TRUE), max(df$gct, na.rm = TRUE))) +
+  geom_point() +
   scale_color_viridis_d(begin = 0.1, end = 0.9, direction = -1, labels = c("Training run", "Race")) +
   scale_size_manual(values = c(2, 4), guide = "none")+
-  labs(y = "Avg ground contact time (ms)", color = "", x = "") +
-  theme(panel.grid = element_blank(), legend.position = "top") +
-  annotate("text", x = as.Date("2024-11-16"), y = 230, label = "Richmond Marathon")
+
+  scale_x_date(date_breaks = "2 months", date_minor_breaks = "1 month", date_labels = "%B") +
+
+  labs(y = "Average GCT (ms)", color = "", x = "") +
+  theme(panel.grid = element_blank(), legend.position = "none",
+        plot.title = element_text(size = 18)) +
+  annotate("text", x = as.Date("2024-11-16"), y = 232.25, label = "Richmond\nMarathon") +
+  annotate("text", x = as.Date("2024-04-28"), y = 217.25, label = "Eugene\nMarathon") +
+  annotate("text", x = as.Date("2024-03-16"), y = 216.25, label = "13.1M") +
+  annotate("text", x = as.Date("2024-04-07"), y = 207.25, label = "10M") +
+  annotate("text", x = as.Date("2024-01-01"), y = 232.25, label = "5k") +
+  annotate("text", x = as.Date("2024-10-13"), y = 199.25, label = "10M") +
+  annotate("text", x = as.Date("2024-09-29"), y = 202.25, label = "5k") 
+ # ggtitle("Average ground contact time (GCT, ms) per run in 2025")
 ```
 
