@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alex Hughes">
-<meta name="dcterms.date" content="2025-01-19">
+<meta name="dcterms.date" content="2025-03-07">
 
-<title>A blog with no name - Garmin running data in 2024</title>
+<title>Cauchy’s Lap - Digging in to my Garmin running dynamics data for 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,7 +62,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -72,8 +71,11 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../inkscape-logo/bitmap2.png" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">A blog with no name</span>
+    <span class="navbar-title">Cauchy’s Lap</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -84,21 +86,27 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="../../about.html">About</a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/hughesan"><i class="bi bi-github" role="img">
-</i> 
- </a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-connect-with-me" role="button" data-bs-toggle="dropdown" aria-expanded="false">Connect with Me</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-connect-with-me">    
+        <li>
+    <a class="dropdown-item" href="../../Hughes_CV_2025.pdf">
+ <span class="dropdown-text">My CV</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://alxhug.bsky.social/"><i class="bi bi-cloud-lightning-rain" role="img">
-</i> 
- </a>
+        <li>
+    <a class="dropdown-item" href="https://www.linkedin.com/in/alexandria-hughes-phd">
+ <span class="dropdown-text">LinkedIn</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.strava.com/athletes/alxhug"><i class="bi bi-strava" role="img">
-</i> 
- </a>
+        <li>
+    <a class="dropdown-item" href="https://www.strava.com/athletes/alxhug">
+ <span class="dropdown-text">Strava</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="https://alxhug.bsky.social/">
+ <span class="dropdown-text">Bluesky</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -109,10 +117,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Garmin running data in 2024</h1>
+      <h1 class="title">Digging in to my Garmin running dynamics data for 2024</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">running</div>
-                <div class="quarto-category">analysis</div>
+                <div class="quarto-category">stats</div>
               </div>
                   </div>
   </div>
@@ -130,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 19, 2025</p>
+        <p class="date">March 7, 2025</p>
       </div>
     </div>
       
@@ -156,23 +164,1037 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell">
 
 </div>
+<section id="training-cycles" class="level3">
+<h3 class="anchored" data-anchor-id="training-cycles">Training cycles</h3>
 <p>In 2024, I ran a total of 2404.7 miles over 338 days. The shape of my year was driven by two marathon training cycles: a 16-week cycle for the Eugene Marathon at the end of April (4/28/24), and an 18-week cycle for the Richmond Marathon held in November (11/16/2024).</p>
-<!-- note - need geom_text and geom_rect not annotate to put on specific facets - note geom_rect is a bunch of rects: https://stackoverflow.com/questions/11889625/annotating-text-on-individual-facet-in-ggplot2 -->
+<!-- note - need geom_text and geom_rect not annotate to put on specific facets - note geom_rect is a bunch of rects so filter for a smaller group to have fewer overlapping rects / use alpha: https://stackoverflow.com/questions/11889625/annotating-text-on-individual-facet-in-ggplot2 -->
+<p>I followed Hal Higdon’s Advanced-1 training plan for Eugene and the Pfitzinger &amp; Douglas 18 week/55 mpw plan for Richmond. Evident here, the Pfitz plan included several more medium-long runs in the 10-14 mile range than the Higdon plan did.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="960"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="1152"></p>
 </div>
 </div>
-<section id="ground-contact-time" class="level3">
-<h3 class="anchored" data-anchor-id="ground-contact-time">Ground contact time</h3>
-<p>Ground contact time (GCT) is the amount of time the foot spends planted on the ground while running; reduce it and you garner free speed. I credit a simple plyometrics routine and a form cue to drive the feet downward when running with no active pulling up, instead letting forward swing be passive after hip extension (like a slingshot). I was happy to see it gradually decrease after I started implementing this cue around March.</p>
-<p>Inexplicably, my GCT started to deteriorate in the weeks before and especially after the Richmond Marathon. On many of these runs, both tapering and then slowly resuming running, I was telling myself to slow down (this was especially frustrating during the taper, because I felt fresh and couldn’t seem to reign it in).</p>
-<p>I do wonder if changing mechanics set the stage for my ITBS, which started in late December.</p>
+</section>
+<section id="running-dynamics-that-determine-pace" class="level3">
+<h3 class="anchored" data-anchor-id="running-dynamics-that-determine-pace">Running dynamics that determine pace</h3>
+<p>Increasing cadence and stride length will both increase speed, but people vary in how much they increase cadence and stride length to achieve a faster pace. In fact, some super shoes are marketed as being for <a href="https://corp.asics.com/en/press/article/2021-06-04-1">“cadence runners”</a> or “stride runners” depending on which strategy they tend to use to speed up! Ground contact time (GCT) is another component of the speed puzzle - how much time the foot stays in contact with the ground while running - with a shorter GCT freeing up time for forward motion.</p>
+<p>We can see the relationship between these determinants of pace in these paired scatterplots. On the diagonal, the distributions of each running variable is shown, with the two off-diagonal panels for each pair showing a scatterplot and the correlation value. Note the strong negative relationships between cadence and pace, and stride length and pace, but the positive correlation between stride length and cadence. Higher cadences and longer strides are each associated with a lower (=faster) pace, and cadence and stride length tend to increase together.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="960"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="1152"></p>
 </div>
 </div>
+<section id="am-i-a-cadence--or-stride-runner" class="level4">
+<h4 class="anchored" data-anchor-id="am-i-a-cadence--or-stride-runner">Am I a cadence- or stride-runner?</h4>
+<p>To compare the relative contributions of each of these factors to my pace, let’s build a model. I can’t do this without noting the huge statistical caveat here that these methods assume independence and my data are certainly not independent - there is likely correlation between successive runs, successive days and weeks, that is not being accounted for, so keep that in mind.</p>
+<p>To put these variables on level-footing, I scaled them to see how a 1-standard deviation (1 SD) change in each would impact pace. Practically, this means we are looking at the impact of changing my cadence by about 7.5 steps/minute (1 SD of my cadence values), a 0.068 meter change in my stride length (1 SD of my stride length values), and a 12 millisecond change in my ground contact time (1 SD of GCT values).</p>
+<p>However, there’s another level of complexity to consider: these variables are pretty biomechanically entangled. For example, increasing cadence when steps are longer will result in a larger increase in pace than increasing cadence by the same amount at a shorter stride length. Additionally, a longer ground contact time could negate the benefits of increased cadence or stride length. All that to say, these variables interact. I fit two models, one with a three-way interaction between cadence, stride length, and GCT, along with all two-way interactions (i.e., cadence and stride length, cadence and GCT, GCT and stride length) and main effect terms, and a second model containing the two-way interactions and main effects. By using a likelihood ratio test, we learn that the addition of the three-way interaction term significantly improves the fit of the model, so we will use the model containing all possible interaction terms.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Variance Table
+
+Model 1: avg_pace_s ~ cadence * stride_len + cadence * gct + gct * stride_len
+Model 2: avg_pace_s ~ cadence * stride_len * gct
+  Res.Df    RSS Df Sum of Sq  Pr(&gt;Chi)    
+1    345 9133.9                           
+2    344 7523.5  1    1610.4 &lt; 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>Coefficient estimates from the model containing all interaction terms:</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="glufylekbs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#glufylekbs table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#glufylekbs thead, #glufylekbs tbody, #glufylekbs tfoot, #glufylekbs tr, #glufylekbs td, #glufylekbs th {
+  border-style: none;
+}
+
+#glufylekbs p {
+  margin: 0;
+  padding: 0;
+}
+
+#glufylekbs .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#glufylekbs .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#glufylekbs .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#glufylekbs .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#glufylekbs .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#glufylekbs .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#glufylekbs .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#glufylekbs .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#glufylekbs .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#glufylekbs .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#glufylekbs .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#glufylekbs .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#glufylekbs .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#glufylekbs .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#glufylekbs .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#glufylekbs .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#glufylekbs .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#glufylekbs .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#glufylekbs .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#glufylekbs .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#glufylekbs .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#glufylekbs .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#glufylekbs .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#glufylekbs .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#glufylekbs .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#glufylekbs .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#glufylekbs .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#glufylekbs .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#glufylekbs .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#glufylekbs .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#glufylekbs .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#glufylekbs .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#glufylekbs .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#glufylekbs .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#glufylekbs .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#glufylekbs .gt_left {
+  text-align: left;
+}
+
+#glufylekbs .gt_center {
+  text-align: center;
+}
+
+#glufylekbs .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#glufylekbs .gt_font_normal {
+  font-weight: normal;
+}
+
+#glufylekbs .gt_font_bold {
+  font-weight: bold;
+}
+
+#glufylekbs .gt_font_italic {
+  font-style: italic;
+}
+
+#glufylekbs .gt_super {
+  font-size: 65%;
+}
+
+#glufylekbs .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#glufylekbs .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#glufylekbs .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#glufylekbs .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#glufylekbs .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#glufylekbs .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#glufylekbs .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="term">term</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate">estimate</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="std.error">std.error</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="term" class="gt_row gt_left">(Intercept)</td>
+<td headers="estimate" class="gt_row gt_right">496.2886433</td>
+<td headers="std.error" class="gt_row gt_right">0.2882150</td>
+<td headers="statistic" class="gt_row gt_right">1721.938866</td>
+<td headers="p.value" class="gt_row gt_right">0.000000e+00</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">cadence</td>
+<td headers="estimate" class="gt_row gt_right">-22.2035147</td>
+<td headers="std.error" class="gt_row gt_right">0.5471352</td>
+<td headers="statistic" class="gt_row gt_right">-40.581402</td>
+<td headers="p.value" class="gt_row gt_right">3.370489e-133</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">stride_len</td>
+<td headers="estimate" class="gt_row gt_right">-31.5741006</td>
+<td headers="std.error" class="gt_row gt_right">0.5142430</td>
+<td headers="statistic" class="gt_row gt_right">-61.399183</td>
+<td headers="p.value" class="gt_row gt_right">1.946863e-187</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">gct</td>
+<td headers="estimate" class="gt_row gt_right">0.9776408</td>
+<td headers="std.error" class="gt_row gt_right">0.3214425</td>
+<td headers="statistic" class="gt_row gt_right">3.041417</td>
+<td headers="p.value" class="gt_row gt_right">2.535488e-03</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">cadence:stride_len</td>
+<td headers="estimate" class="gt_row gt_right">4.6286720</td>
+<td headers="std.error" class="gt_row gt_right">0.2945853</td>
+<td headers="statistic" class="gt_row gt_right">15.712504</td>
+<td headers="p.value" class="gt_row gt_right">2.575984e-42</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">cadence:gct</td>
+<td headers="estimate" class="gt_row gt_right">-1.8105891</td>
+<td headers="std.error" class="gt_row gt_right">0.4906499</td>
+<td headers="statistic" class="gt_row gt_right">-3.690185</td>
+<td headers="p.value" class="gt_row gt_right">2.604265e-04</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">stride_len:gct</td>
+<td headers="estimate" class="gt_row gt_right">1.1373101</td>
+<td headers="std.error" class="gt_row gt_right">0.3761488</td>
+<td headers="statistic" class="gt_row gt_right">3.023565</td>
+<td headers="p.value" class="gt_row gt_right">2.685796e-03</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">cadence:stride_len:gct</td>
+<td headers="estimate" class="gt_row gt_right">-0.9041686</td>
+<td headers="std.error" class="gt_row gt_right">0.1053684</td>
+<td headers="statistic" class="gt_row gt_right">-8.581022</td>
+<td headers="p.value" class="gt_row gt_right">3.278699e-16</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p>To try to answer the question about whether an increase in cadence or stride length improves speed more, the interpretation of the model coefficients isn’t straightforward with all of the interaction terms. But we can use the model to get the estimated paces under several scenarios: my typical cadence and stride length, +1 SD to my cadence (i.e., 7.5 more steps/minute) at typical stride length, typical cadence at +1 SD to my stride length (strides 0.068 meters longer), and +1 SD to both my cadence and stride length (all of these at my typical GCT).</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="akbakbvynw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#akbakbvynw table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#akbakbvynw thead, #akbakbvynw tbody, #akbakbvynw tfoot, #akbakbvynw tr, #akbakbvynw td, #akbakbvynw th {
+  border-style: none;
+}
+
+#akbakbvynw p {
+  margin: 0;
+  padding: 0;
+}
+
+#akbakbvynw .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#akbakbvynw .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#akbakbvynw .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#akbakbvynw .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#akbakbvynw .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#akbakbvynw .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#akbakbvynw .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#akbakbvynw .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#akbakbvynw .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#akbakbvynw .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#akbakbvynw .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#akbakbvynw .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#akbakbvynw .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#akbakbvynw .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#akbakbvynw .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#akbakbvynw .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#akbakbvynw .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#akbakbvynw .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#akbakbvynw .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#akbakbvynw .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#akbakbvynw .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#akbakbvynw .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#akbakbvynw .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#akbakbvynw .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#akbakbvynw .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#akbakbvynw .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#akbakbvynw .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#akbakbvynw .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#akbakbvynw .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#akbakbvynw .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#akbakbvynw .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#akbakbvynw .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#akbakbvynw .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#akbakbvynw .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#akbakbvynw .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#akbakbvynw .gt_left {
+  text-align: left;
+}
+
+#akbakbvynw .gt_center {
+  text-align: center;
+}
+
+#akbakbvynw .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#akbakbvynw .gt_font_normal {
+  font-weight: normal;
+}
+
+#akbakbvynw .gt_font_bold {
+  font-weight: bold;
+}
+
+#akbakbvynw .gt_font_italic {
+  font-style: italic;
+}
+
+#akbakbvynw .gt_super {
+  font-size: 65%;
+}
+
+#akbakbvynw .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#akbakbvynw .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#akbakbvynw .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#akbakbvynw .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#akbakbvynw .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#akbakbvynw .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#akbakbvynw .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Scenario">Scenario</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Estimated pace (min/mi)">Estimated pace (min/mi)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Lower 95% CI">Lower 95% CI</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Upper 95% CI">Upper 95% CI</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Scenario" class="gt_row gt_left">Normal cadence, normal stride length</td>
+<td headers="Estimated pace (min/mi)" class="gt_row gt_right">8.27</td>
+<td headers="Lower 95% CI" class="gt_row gt_right">8.26</td>
+<td headers="Upper 95% CI" class="gt_row gt_right">8.28</td></tr>
+    <tr><td headers="Scenario" class="gt_row gt_left">+1 SD cadence, normal stride length</td>
+<td headers="Estimated pace (min/mi)" class="gt_row gt_right">7.90</td>
+<td headers="Lower 95% CI" class="gt_row gt_right">7.88</td>
+<td headers="Upper 95% CI" class="gt_row gt_right">7.92</td></tr>
+    <tr><td headers="Scenario" class="gt_row gt_left">Normal cadence, +1 SD stride length</td>
+<td headers="Estimated pace (min/mi)" class="gt_row gt_right">7.74</td>
+<td headers="Lower 95% CI" class="gt_row gt_right">7.72</td>
+<td headers="Upper 95% CI" class="gt_row gt_right">7.77</td></tr>
+    <tr><td headers="Scenario" class="gt_row gt_left">+1 SD cadence, +1 SD stride length</td>
+<td headers="Estimated pace (min/mi)" class="gt_row gt_right">7.45</td>
+<td headers="Lower 95% CI" class="gt_row gt_right">7.43</td>
+<td headers="Upper 95% CI" class="gt_row gt_right">7.47</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p>From this, we see that I’m slightly a stride-runner, but the best results occur when both cadence and stride length are increased.</p>
+</section>
+</section>
+<section id="more-about-ground-contact-time" class="level3">
+<h3 class="anchored" data-anchor-id="more-about-ground-contact-time">More about ground contact time</h3>
+<p>I held ground contact time constant in the pace model because isn’t really voluntarily controlled like cadence and stride length are. However, there are cues and training that you can use to improve it in general. I tried to implement a couple techniques this year: a simple plyometrics routine and a form cue to drive the feet downward when running, letting forward swing be passive after hip extension (<a href="https://www.scienceofrunning.com/2010/08/how-to-run-running-with-proper.html?v=47e5dceea252">like a slingshot - Steve Magness</a>). I was happy to see my GCT gradually decrease after I started trying to improve it around March.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="1152"></p>
+</div>
+</div>
+<p>Inexplicably, my GCT started to get worse in the weeks before and especially after the Richmond Marathon. On many of these runs, both tapering and then slowly resuming running, I was telling myself to slow down. This was especially frustrating during the taper, because I felt fresh and couldn’t seem to reign it in. I imagine that actively trying to slow down caused me to increase my GCT. I do wonder if changing mechanics set the stage for my ITBS, which started in late December.</p>
 
 
 </section>

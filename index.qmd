@@ -1,5 +1,5 @@
 ---
-title: "the blog with no name"
+title: "Recent posts"
 listing:
   contents: posts
   sort: "date desc"

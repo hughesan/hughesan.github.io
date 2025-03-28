@@ -2,20 +2,30 @@ project:
   type: website
 
 website:
-  title: "A blog with no name"
+  title: "Cauchy's Lap"
   navbar:
+    search: true
+    logo: "inkscape-logo/bitmap2.png"
     right:
-      - about.qmd
-      - icon: github
-        href: https://github.com/hughesan
-      - icon: cloud-lightning-rain
-        href: https://alxhug.bsky.social/
-      - icon: strava
-        href: https://www.strava.com/athletes/alxhug
+      - text: "About"
+        file: about.qmd
+      - text: "Connect with Me"
+        menu:
+          - text: "My CV"
+            href: Hughes_CV_2025.pdf
+          - text: "LinkedIn"
+            href: "https://www.linkedin.com/in/alexandria-hughes-phd"
+          - text: "Strava"
+            href: https://www.strava.com/athletes/alxhug
+          - text: "Bluesky"
+            href: https://alxhug.bsky.social/
+
 format:
   html:
-    theme: united
-    css: styles.css
+    theme: 
+      - united
+      - styles-mod.scss
+      
 
 
 

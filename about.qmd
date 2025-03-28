@@ -1,19 +1,24 @@
 ---
 title: "About"
-image: ramsey.jpg
+image: cauchy-baskey.jpg
 about:
   template: jolla
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
+    - icon: file-pdf-fill
+      text: My CV
+      href: Hughes_CV_2025.pdf
+    - icon: strava
+      text: Strava
+      href: https://www.strava.com/athletes/alxhug
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
-    - icon: github
-      text: Github
-      href: https://github.com
+      href: https://linkedin.com/in/alexandria-hughes-phd
+    - icon: emoji-smile-upside-down
+      text: Bluesky
+      href: https://alxhug.bsky.social/
 
 ---
 
-About this blog
+Hello! I'm a statistician, neuroscience PhD, and avid runner. I started this blog to have somewhere to write. I imagine that most of what I'll write about here is in the area of running and stats, but I'm not going to set any bounds on that.
+
+Pictured here is Cauchy, our heavy-tailed nebelung cat. I like to run laps, but he prefers to sit in them.

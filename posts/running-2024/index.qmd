@@ -1,21 +1,23 @@
 ---
-title: "Garmin running data in 2024"
+title: "Digging in to my Garmin running dynamics data for 2024"
 author: "Alex Hughes"
-date: "2025-1-19"
-date-modified: "2025-1-19"
-categories: [running, analysis]
+date: "2025-3-7"
+date-modified: "2025-3-9"
+categories: [running, stats]
 execute:
   echo: false
   message: false
   warning: false
-  fig-width: 10
-  fig-height: 6
-draft: true
+  fig-width: 12
+  fig-height: 7.2
+draft: false
 ---
 
 ```{r}
 library(dplyr)
 library(ggplot2)
+library(GGally) # pairs plot
+library(gt) # tables
 
 theme_set(theme_bw(base_size = 16))
 ```
@@ -51,9 +53,13 @@ df <- gdata %>%
                         
 ```
 
+### Training cycles
+
 In 2024, I ran a total of 2404.7 miles over 338 days. The shape of my year was driven by two marathon training cycles: a 16-week cycle for the Eugene Marathon at the end of April (4/28/24), and an 18-week cycle for the Richmond Marathon held in November (11/16/2024).
 
-<!-- note - need geom_text and geom_rect not annotate to put on specific facets - note geom_rect is a bunch of rects: https://stackoverflow.com/questions/11889625/annotating-text-on-individual-facet-in-ggplot2 -->
+<!-- note - need geom_text and geom_rect not annotate to put on specific facets - note geom_rect is a bunch of rects so filter for a smaller group to have fewer overlapping rects / use alpha: https://stackoverflow.com/questions/11889625/annotating-text-on-individual-facet-in-ggplot2 -->
+
+I followed Hal Higdon's Advanced-1 training plan for Eugene and the Pfitzinger & Douglas 18 week/55 mpw plan for Richmond. Evident here, the Pfitz plan included several more medium-long runs in the 10-14 mile range than the Higdon plan did.
 
 ```{r}
 
@@ -95,14 +101,82 @@ ggplot(df_long,
   scale_x_date(date_breaks = "2 months", date_minor_breaks = "1 month", date_labels = "%B")
 ```
 
+### Running dynamics that determine pace
 
-### Ground contact time
+Increasing cadence and stride length will both increase speed, but people vary in how much they increase cadence and stride length to achieve a faster pace. In fact, some super shoes are marketed as being for ["cadence runners"](https://corp.asics.com/en/press/article/2021-06-04-1) or "stride runners" depending on which strategy they tend to use to speed up! Ground contact time (GCT) is another component of the speed puzzle - how much time the foot stays in contact with the ground while running - with a shorter GCT freeing up time for forward motion.
 
-Ground contact time (GCT) is the amount of time the foot spends planted on the ground while running; reduce it and you garner free speed. I credit a simple plyometrics routine and a form cue to drive the feet downward when running with no active pulling up, instead letting forward swing be passive after hip extension (like a slingshot). I was happy to see it gradually decrease after I started implementing this cue around March.
+We can see the relationship between these determinants of pace in these paired scatterplots. On the diagonal, the distributions of each running variable is shown, with the two off-diagonal panels for each pair showing a scatterplot and the correlation value. Note the strong negative relationships between cadence and pace, and stride length and pace, but the positive correlation between stride length and cadence. Higher cadences and longer strides are each associated with a lower (=faster) pace, and cadence and stride length tend to increase together.
 
-Inexplicably, my GCT started to deteriorate in the weeks before and especially after the Richmond Marathon. On many of these runs, both tapering and then slowly resuming running, I was telling myself to slow down (this was especially frustrating during the taper, because I felt fresh and couldn't seem to reign it in). 
+```{r}
+#|fig-height: 10
+df_filt <- df %>%
+   filter(avg_pace_s < 700 & Distance > 1 & cadence > 140) # drop some low-quality records
 
-I do wonder if changing mechanics set the stage for my ITBS, which started in late December.
+ggpairs(df_filt[,c("Distance", "avg_pace_s", "cadence", "stride_len", "gct")], 
+        columnLabels = c("Distance", "Pace (s/mi)", "Cadence", "Stride length", "GCT"))
+```
+
+#### Am I a cadence- or stride-runner?
+
+To compare the relative contributions of each of these factors to my pace, let's build a model. I can't do this without noting the huge statistical caveat here that these methods assume independence and my data are certainly not independent - there is likely correlation between successive runs, successive days and weeks, that is not being accounted for, so keep that in mind. 
+
+To put these variables on level-footing, I scaled them to see how a 1-standard deviation (1 SD) change in each would impact pace. Practically, this means we are looking at the impact of changing my cadence by about `r signif(sd(df$cadence), 2)` steps/minute (1 SD of my cadence values), a `r signif(sd(df$stride_len), 2)` meter change in my stride length (1 SD of my stride length values), and a `r signif(sd(df$gct), 2)` millisecond change in my ground contact time (1 SD of GCT values).
+
+However, there's another level of complexity to consider: these variables are pretty biomechanically entangled. For example, increasing cadence when steps are longer will result in a larger increase in pace than increasing cadence by the same amount at a shorter stride length. Additionally, a longer ground contact time could negate the benefits of increased cadence or stride length. All that to say, these variables interact. I fit two models, one with a three-way interaction between cadence, stride length, and GCT, along with all two-way interactions (i.e., cadence and stride length, cadence and GCT, GCT and stride length) and main effect terms, and a second model containing the two-way interactions and main effects. By using a likelihood ratio test, we learn that the addition of the three-way interaction term significantly improves the fit of the model, so we will use the model containing all possible interaction terms.
+
+```{r}
+df_scaled <- df %>%
+  mutate(across(
+    c(avg_HR:stride_len),
+    ~ scale(.x, center = T)))
+
+mod <- lm(avg_pace_s ~ cadence*stride_len*gct, data = df_scaled) # 3-way intx term and all lower-order terms
+#summary(mod)
+
+mod_simple <- lm(avg_pace_s ~ cadence*stride_len + cadence*gct + gct*stride_len ,data = df_scaled) #2-way and lower
+
+anova(mod_simple, mod, test = "LRT")
+
+```
+
+Coefficient estimates from the model containing all interaction terms:
+
+```{r}
+broom::tidy(mod) |> gt::gt()
+
+# predict doesn't work on scaled predictors model, so fit w/ unscaled for predict
+mod_unscaled <- lm(avg_pace_s ~ cadence*stride_len*gct, data = df)
+```
+
+To try to answer the question about whether an increase in cadence or stride length improves speed more, the interpretation of the model coefficients isn't straightforward with all of the interaction terms. But we can use the model to get the estimated paces under several scenarios: my typical cadence and stride length, +1 SD to my cadence (i.e., 7.5 more steps/minute) at typical stride length, typical cadence at +1 SD to my stride length (strides 0.068 meters longer), and +1 SD to both my cadence and stride length (all of these at my typical GCT).
+
+```{r}
+a <- predict(mod_unscaled, newdata = data.frame(cadence = 184.1222, stride_len = 1.058409, gct = 223.6193), interval = "confidence")
+b <- predict(mod_unscaled, newdata = data.frame(cadence = 191.6222, stride_len = 1.058409, gct = 223.6193), interval = "confidence")
+c <- predict(mod_unscaled, newdata = data.frame(cadence = 184.1222, stride_len = 1.126409, gct = 223.6193), interval = "confidence")
+d <- predict(mod_unscaled, newdata = data.frame(cadence = 191.6222, stride_len = 1.126409, gct = 223.6193), interval = "confidence")
+
+data.frame(rbind(a, b, c, d)) %>%
+  mutate(Scenario = c("Normal cadence, normal stride length",
+                   "+1 SD cadence, normal stride length",
+                   "Normal cadence, +1 SD stride length",
+                   "+1 SD cadence, +1 SD stride length")) %>%
+  relocate(Scenario) %>%
+  mutate(across(
+    c("fit", "lwr", "upr"),
+    ~ signif(.x/60, 3)
+  )) %>%
+  rename(`Estimated pace (min/mi)` = fit,
+         `Lower 95% CI` = lwr,
+         `Upper 95% CI` = upr) %>%
+  gt()
+```
+
+From this, we see that I'm slightly a stride-runner, but the best results occur when both cadence and stride length are increased.
+
+### More about ground contact time
+
+I held ground contact time constant in the pace model because isn't really voluntarily controlled like cadence and stride length are. However, there are cues and training that you can use to improve it in general. I tried to implement a couple techniques this year: a simple plyometrics routine and a form cue to drive the feet downward when running, letting forward swing be passive after hip extension ([like a slingshot - Steve Magness](https://www.scienceofrunning.com/2010/08/how-to-run-running-with-proper.html?v=47e5dceea252)). I was happy to see my GCT gradually decrease after I started trying to improve it around March.
 
 ```{r}
 ggplot(df, aes(x = Date, y = gct, color = factor(Race), size = factor(Race))) +
@@ -116,7 +190,8 @@ ggplot(df, aes(x = Date, y = gct, color = factor(Race), size = factor(Race))) +
   scale_x_date(date_breaks = "2 months", date_minor_breaks = "1 month", date_labels = "%B") +
 
   labs(y = "Average GCT (ms)", color = "", x = "") +
-  theme(panel.grid = element_blank(), legend.position = "none",
+  theme(#panel.grid = element_blank(), 
+        legend.position = "none",
         plot.title = element_text(size = 18)) +
   annotate("text", x = as.Date("2024-11-16"), y = 232.25, label = "Richmond\nMarathon") +
   annotate("text", x = as.Date("2024-04-28"), y = 217.25, label = "Eugene\nMarathon") +
@@ -128,3 +203,4 @@ ggplot(df, aes(x = Date, y = gct, color = factor(Race), size = factor(Race))) +
  # ggtitle("Average ground contact time (GCT, ms) per run in 2025")
 ```
 
+Inexplicably, my GCT started to get worse in the weeks before and especially after the Richmond Marathon. On many of these runs, both tapering and then slowly resuming running, I was telling myself to slow down. This was especially frustrating during the taper, because I felt fresh and couldn't seem to reign it in. I imagine that actively trying to slow down caused me to increase my GCT. I do wonder if changing mechanics set the stage for my ITBS, which started in late December.
