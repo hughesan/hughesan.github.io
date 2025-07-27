@@ -1,0 +1,30 @@
+---
+title: "Histamine in endurance training"
+author: "Alex Hughes"
+date: "2025-07-27"
+date-modified: "2025-07-27"
+categories: [research, running]
+execute:
+  echo: false
+  message: false
+  warning: false
+  fig-width: 12
+  fig-height: 7.2
+draft: true
+---
+
+It's July on the east coast, so the running conditions most mornings are hot, soupy, and...giving me hives? I often notice a few hives on my arms and upper back post-run, so when I stumbled upon this recent [paper](https://doi.org/10.1152/japplphysiol.00687.2024) from John Halliwill's group at the University of Oregon, I was curious to learn more about the role of histamine in running.
+
+# What did the paper show?
+
+TL;DR: Antihistamines reduced some of the adaptations to aerobic exercise. 
+
+This study was a randomized double-blind placebo-controlled trial on 10 female and 6 male participants who participated in mostly moderate endurance training on a bike 3-4 times per week. The participants weren't previously this active, so there was room for fitness to be gained and measured over the course of the study. Before each exercise session, participants were administered fexofenadine or ranitidine, which are antihistamines (brand names Allegra and Zantac), or a placebo, with women and men distributed equally between the intervention and placebo groups.
+
+Several outcomes were assessed at baseline and at 2, 4, and 6 weeks, including heart rate and blood pressure, VO2max and peak power, weight and body fat percentage, and vascular measurements; there was also a muscle biopsy taken from the lateral quad and a blood draw for several additional readouts of fitness.
+
+
+
+
+
+# My questions

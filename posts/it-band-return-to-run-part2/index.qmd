@@ -1,5 +1,5 @@
 ---
-title: "Returning to run with IT band syndrome (Part 2): looking back at what actually got me through"
+title: "Returning to run with IT band syndrome (Part 2)"
 author: "Alex Hughes"
 date: "2025-06-22"
 date-modified: "2025-06-22"
@@ -13,9 +13,11 @@ execute:
 draft: false
 ---
 
-It has been 12 weeks since my previous [post](../it-band-return-to-run/index.html) about returning to running with IT band syndrome. At that time, I had just completed a run/walk workout that consisted of 18 total running minutes and I imagined I was only a week or two away from continuous running and starting to build up to more than 5-10 miles per week. I was buoyed by optimism, but it would actually be 7 more weeks of run/walk intervals 2-3 times per week before I would successfully complete a nonstop 30 minute run. Yesterday I completed a 9 mile run with minimal symptoms and decided I was recovered enough to share some reflections on what got me back to real running.
+Yesterday I completed a 9 mile run with minimal symptoms and decided I was recovered enough to share some reflections on what got me back to real running after a course of run/walk.
 
-## First, some rules
+It has been 12 weeks since my previous [post](../it-band-return-to-run/index.html) about returning to running with IT band syndrome. At that time, I had just completed a run/walk workout that consisted of 18 total running minutes and I imagined I was only a week or two away from continuous running and starting to build up to more than 5-10 miles per week. I was buoyed by optimism, but it would actually be 7 more weeks of run/walk intervals 2-3 times per week before I would successfully complete a nonstop 30 minute run. 
+
+## First, I set some rules
 
 ITBS is an inflammatory condition and a positive feedback loop - the more irritated the area is, the less tolerant it will be of poor quality movement, so it takes less insult to prolong the injury. Inflammation management during return to run is critical. I set a rule for myself that the day before a planned run should be basically symptom-free, otherwise I need to wait another day. I iced after every run and applied Diclofenac/Voltaren gel to the side of my knee in the morning before runs, after showers, and at the end of the day.
 
@@ -48,7 +50,7 @@ I don't think one week has passed in my entire 6 month ITBS experience without m
   
   + I started working on hip mobility, and specifically hip internal rotation. Not knowing much about "internal rotation", I feared it early in my ITBS after reading that ITBS can result from too much/uncontrolled knee rotation inward, which I thought was the same thing. When I tried the hip 90/90 mobility drill, my left (ITBS) hip was very uncomfortable when it was in the internally rotated position. My hip felt jammed up like something was going to break if I tried to stretch or sink into the position. I decided with nothing to lose I was going to work on this limitation, mostly by holding the position for a few minutes at a time, and gradually it got easier and less uncomfortable. I also started doing this [posterior hip capsule stretch](https://www.conorharris.com/blog/the-underrated-key-of-improving-internal-rotation). I don't know if any of this is related to my ITBS improvement or merely coincidental.
 
-  + Later update to the update (July 2025): I picked up a copy of Jay Dicharry's *Running Rewired* and started doing the Foam Roller Drill (pg. 88) [(also on Youtube)](https://youtu.be/X-4IsJrNE98). I knew this one was going to make a difference as soon as I tried it because it felt pretty different between my sides and was more challenging on my ITBS side. I also appreciate how Jay discusses in his book that it's unlikely your glutes are actually "weak", but neuromuscular coordination can be improved using movements such as this drill.
+  + Later update to the update (July 2025): I picked up a copy of Jay Dicharry's *Running Rewired* and started doing the Foam Roller Drill (pg. 88) [(also on Youtube)](https://youtu.be/X-4IsJrNE98). I knew this one was going to make a difference as soon as I tried it because it felt pretty different between my left and right sides and was more challenging on my ITBS side.
   
   
 
