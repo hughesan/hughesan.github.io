@@ -2,7 +2,7 @@
 title: "Histamine in endurance training"
 author: "Alex Hughes"
 date: "2025-07-27"
-date-modified: "2025-07-27"
+date-modified: "2025-07-31"
 categories: [research, running]
 execute:
   echo: false
@@ -13,18 +13,28 @@ execute:
 draft: true
 ---
 
-It's July on the east coast, so the running conditions most mornings are hot, soupy, and...giving me hives? I often notice a few hives on my arms and upper back post-run, so when I stumbled upon this recent [paper](https://doi.org/10.1152/japplphysiol.00687.2024) from John Halliwill's group at the University of Oregon, I was curious to learn more about the role of histamine in running.
+It's the end of July on the east coast, so the running conditions most mornings are hot, soupy, and...giving me hives? I often notice a few hives on my arms and upper back post-run, so when I stumbled upon this recent [paper](https://doi.org/10.1152/japplphysiol.00687.2024) from John Halliwill's group at the University of Oregon, I was curious to learn more about the role of histamine in running.
 
 # What did the paper show?
 
-TL;DR: Antihistamines reduced some of the adaptations to aerobic exercise. 
+TL;DR: Antihistamines reduced some of the adaptations to aerobic exercise; some more than others, and some by *a lot*. 
 
 This study was a randomized double-blind placebo-controlled trial on 10 female and 6 male participants who participated in mostly moderate endurance training on a bike 3-4 times per week. The participants weren't previously this active, so there was room for fitness to be gained and measured over the course of the study. Before each exercise session, participants were administered fexofenadine or ranitidine, which are antihistamines (brand names Allegra and Zantac), or a placebo, with women and men distributed equally between the intervention and placebo groups.
 
-Several outcomes were assessed at baseline and at 2, 4, and 6 weeks, including heart rate and blood pressure, VO2max and peak power, weight and body fat percentage, and vascular measurements; there was also a muscle biopsy taken from the lateral quad and a blood draw for several additional readouts of fitness.
+Several outcomes were assessed at baseline and at 2, 4, and 6 weeks, including heart rate and blood pressure, VO2max and peak power via a peak exercise test, body composition, vascular measurements, a blood draw for additional readouts of fitness; at 6 weeks there was also a muscle biopsy taken from the lateral quad to examine capillary coverage of different muscle fiber types.
 
+## Peak power and VO2peak
 
+Over the 6 week program, peak power and VO2peak increased in both the blockade (antihistamine) and control groups: in the blockade group, there was an average 8.9% increase (95% CI: 2.4-15.4%) and within the control group, there was an average 18% increase (95% CI: 9.0-27.0%). The authors state in the discussion section that antihistamines reduce gains in fitness by half - as far as I can tell, this 8.9% vs 18% increase in peak power is the inspiration behind the word "half". However, the statistical test for the between-group comparison is not significant (interaction p = 0.42) so the conclusion that blockade impeded peak power development is not statistically supported; the wide confidence intervals for the within-group effects show us that individual responses to training in both groups were quite variable. VO2peak also increased in both groups over time; the degree and rates of improvement were not different between antihistamine blockade and the control groups.
 
+## Muscle enzymes and fiber contacts by capillaries
 
+By taking a biopsy of the lateral quad at 6 weeks, the authors were able to stain muscle fibers - slow (type I) and two types of fast-twitch fibers (IIa, IIx) - to look at improvements in vascular structure following training. The number of capillaries per fiber increased over time across all fiber types in both the blockade and control groups. However, when they looked at a metabolic enzyme, succinate dehydrogenase (complex II of the mitochondrial electron transport chain), they found a stark blunting of enzyme activity in the fibers of the antihistamine group but not in the control group. For slow type I fibers, the SDH activity in the antihistamine group was improved by 2.5% (95% CI: −69.2-74.2%) but was improved by 136.0% (95% CI: 79.2-192.8%) in the control group. In this case, the between-group comparison was significant between blockade and control.
 
-# My questions
+# Conclusions
+
+Does any of this have anything to do with the hives I get on hot summer runs? I don't know. I enjoyed learning about the role of histamine in exercise adaptation and will probably think twice about taking anything for allergies before a run (even if the recommendations aren't there yet). 
+
+# Further reading
+
+1. Review of so many other functions of histamines in exercise: Luttrell & Halliwill 2017 [link](https://doi.org/10.1249/JES.0000000000000093) and [pdf](paper.pdf)
