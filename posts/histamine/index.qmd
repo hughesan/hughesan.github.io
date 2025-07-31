@@ -10,7 +10,7 @@ execute:
   warning: false
   fig-width: 12
   fig-height: 7.2
-draft: true
+draft: false
 ---
 
 It's the end of July on the east coast, so the running conditions most mornings are hot, soupy, and...giving me hives? I often notice a few hives on my arms and upper back post-run, so when I stumbled upon this recent [paper](https://doi.org/10.1152/japplphysiol.00687.2024) from John Halliwill's group at the University of Oregon, I was curious to learn more about the role of histamine in running.
