@@ -1,0 +1,31 @@
+---
+title: "Combining Lydiard lacing with a heel lock for lace-bite/shoelace pain"
+author: "Alex Hughes"
+date: "2025-08-16"
+date-modified: "2025-08-17"
+categories: [research, running, tips]
+execute:
+  echo: false
+  message: false
+  warning: false
+draft: false
+---
+
+A little over a year ago, the latest model of the shoe line I'd been running in since 2017 (the Asics GT-2000) had its tongue changed from plush to very thin and minimal. I started having pain on the tops of my feet that made running and even everyday shoe wear very uncomfortable. It turns out this is irritation of the tibialis anterior or extensor tendons in the feet and is called "lace bite" among hockey players and runners.
+
+Two changes got me out of lace-bite hell: I got and applied some sticky-backed cushion pads to the underside of the shoe tongues to protect the tops of my feet from the lace pressure (like [these](https://www.amazon.com/dp/B0030M800C)), and I started lacing my shoes differently after learning a bit about Arthur Lydiard. Lydiard was a coach who is best known for the concept of periodization in training. In his training manual ([pdf](Lydiard.pdf)), he dedicates a single paragraph to another concept he is known for - a shoe-lacing technique that has come to be known as Lydiard lacing.
+
+Lydiard claimed in his manual and elsewhere that lacing in this way, with laces running in parallel straight across the eyelets, reduces pressure on the metatarsals. Is it true? And would this help with my lace bite, which is somewhat higher up on the foot near the ankle?
+
+## Try it out!
+
+For me, Lydiard lacing offered quick relief, especially paired with the cushion pads. It's possible that switching up the lacing pattern to anything other than the default criss-cross pattern would have alleviated pressure on the spots that were irritated, but I like Lydiard lacing now and have stuck with it. One improvement I have made is to also incorporate a heel-lock, which prevents foot slippage inside the shoe:
+
+![Right shoe lacing pattern, combining Lydiard lacing with a heel-lock/runner's loop.](lydiard-with-heel-lock.png){width=80%}
+
+
+
+
+
+
+
