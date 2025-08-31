@@ -1,0 +1,16 @@
+---
+title: "RRCA certification and volunteer coaching services"
+author: "Alex Hughes"
+date: "2025-08-31"
+date-modified: "2025-08-31"
+categories: [run coaching]
+execute:
+  echo: false
+  message: false
+  warning: false
+draft: false
+---
+
+A couple of weeks ago I became certified as an RRCA-certified run coach (level I/coaching for adults)! I'm excited to be able to share my love and knowledge of running with others. I am offering basic run coaching/consultation on a voluntary basis. 
+
+I can help with designing training plans that take into account your work/life/schedule constraints and provide general advice on everything from shoelaces to blisters to designing good routes. As a professional data scientist, I'm also happy to talk about the data your smartwatch may be collecting and what can be learned from it to improve your training. To get in touch, see my [coaching page](https://www.rrca.org/coach/alexandria-hughes/).
