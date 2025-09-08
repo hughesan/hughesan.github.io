@@ -31,7 +31,7 @@ On the left sidebar follow the Erlenmeyer flask icon (Training Analysis) to sele
 
 Garmin notoriously only gives out rounded integer-valued VO2max values (50, 51, etc), but you can see your raw values by selecting VO2max estimate:
 
-![VO2max (from file) values over the past 15 months - I reached a high around the 2024 Richmond Marathon, had a prolonged ITBS injury (Jan - Mar), and began a return to run program around the beginning of April](runalyze-trend-analysis.PNG) 
+![VO2max (from file) values over the past 12 months - I reached a high around the 2024 Richmond Marathon, had a prolonged ITBS injury (Jan - Mar), and began a return to run program around the beginning of April](runalyze-trend-analysis.PNG) 
 
 I may at some point do a post on my full return-to-run and how these values changed over time. For now I'll just note that there are a handful of misplaced values here from various non-run activities that Garmin included as "runs", for example, treadmill walking, which I did a lot of when my ITBS was at its worst in the winter and early spring. Another interesting variable for my return to run journey is vertical oscillation, the "bounciness" of my stride:
 
