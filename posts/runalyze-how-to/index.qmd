@@ -1,5 +1,5 @@
 ---
-title: "How to use Runalyze to export Garmin activity data"
+title: "How to use Runalyze to explore and export Garmin activity data"
 author: "Alex Hughes"
 date: "2025-09-08"
 date-modified: "2025-09-08"
