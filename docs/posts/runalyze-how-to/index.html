@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alex Hughes">
-<meta name="dcterms.date" content="2025-08-31">
+<meta name="dcterms.date" content="2025-09-08">
 
-<title>Cauchy’s Lap - RRCA certification and volunteer coaching services</title>
+<title>Cauchy’s Lap - How to use Runalyze to export Garmin activity data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,9 +117,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">RRCA certification and volunteer coaching services</h1>
+      <h1 class="title">How to use Runalyze to export Garmin activity data</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">run coaching</div>
+                <div class="quarto-category">running</div>
+                <div class="quarto-category">data</div>
+                <div class="quarto-category">stats</div>
               </div>
                   </div>
   </div>
@@ -137,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 31, 2025</p>
+        <p class="date">September 8, 2025</p>
       </div>
     </div>
       
@@ -154,10 +156,45 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>A couple of weeks ago I became certified as an RRCA-certified run coach (level I/coaching for adults)! I’m excited to be able to share my love and knowledge of running with others.</p>
-<p>I can help with designing training plans that take into account your work/life/schedule constraints and provide general advice on everything from shoelaces to blisters to designing good routes. As a professional data scientist, I’m also happy to talk about the data your smartwatch may be collecting and what can be learned from it to improve your training. To get in touch, see my <a href="https://www.rrca.org/coach/alexandria-hughes/">coaching page</a>.</p>
+<p><a href="https://runalyze.com/">Runalyze</a> is a free tool that I use to view and export my run data. Here are a few of my favorite Runalyze features and how to use Runalyze to access data that Garmin makes quite difficult to get.</p>
+<section id="quick-intro-to-runalyze" class="level1">
+<h1>Quick intro to Runalyze</h1>
+<p>For those familiar with Strava, Runalyze similarly syncs with Garmin Connect after each activity and pulls most (all?) of the same information. Unlike Strava, Runalyze isn’t a social network. Your activities are displayed in a table and you can control which variables appear in the columns. Here’s my table from last week:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="runalyze1.PNG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Runalyze dashboard from the last week of August, 2025</figcaption><p></p>
+</figure>
+</div>
+<p>Next to the activity table in the dashboard there are panels that summarize monthly activity data, several measures of training load including Runalyze’s “effective VO2max” and “marathon shape”, and race predictions including comparisons to race PRs. The <a href="https://runalyze.com/help/article/vo2max">effective VO2max</a> value is roughly comparable to Jack Daniel’s VDOT (both are almost certainly lower than your Garmin VO2max) and <a href="https://runalyze.com/help/article/marathon-shape">marathon shape</a> is a nifty adjustment of the VO2max-based race predictions for training readiness (long runs and weekly volume).</p>
+<section id="viewing-data-in-runalyze" class="level2">
+<h2 class="anchored" data-anchor-id="viewing-data-in-runalyze">Viewing data in Runalyze</h2>
+<p>On the left sidebar follow the Erlenmeyer flask icon (Training Analysis) to select Trend Analysis. Select a time window of interest and limit the sport to just “running” and click “Add plot”. A plot of Pace should appear. In the dropdown, there are lots of metrics available to look at over time.</p>
+<p>Garmin notoriously only gives out rounded integer-valued VO2max values (50, 51, etc), but you can see your raw values by selecting VO2max estimate:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="runalyze-trend-analysis.PNG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">VO2max (from file) values over the past 15 months - I reached a high around the 2024 Richmond Marathon, had a prolonged ITBS injury (Jan - Mar), and began a return to run program around the beginning of April</figcaption><p></p>
+</figure>
+</div>
+<p>I may at some point do a post on my full return-to-run and how these values changed over time. For now I’ll just note that there are a handful of misplaced values here from various non-run activities that Garmin included as “runs”, for example, treadmill walking, which I did a lot of when my ITBS was at its worst in the winter and early spring. Another interesting variable for my return to run journey is vertical oscillation, the “bounciness” of my stride:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="runalyze-vertosc.PNG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Vertical oscillation (cm) over the same time period</figcaption><p></p>
+</figure>
+</div>
+<p>I used to be quite bouncy and my vertical oscillation varied a lot day-to-day, but my current stride appears to be less bouncy and is much more consistent. Notably, since my return-to-run program started with run/walks with a high proportion of walking - and walking has almost no bounce - the vertical oscillation of these “runs” are artifactually lower in April and early May.</p>
+</section>
+<section id="how-do-i-download-my-data" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-i-download-my-data">How do I download my data?</h2>
+<p>The Trend Analysis tool is nice for quickly exploring your data, but you might prefer to download your data to work with it elsewhere. On Runalyze, there’s no download button. At one point I learned these tricks for downloading data on Reddit and saved the links. Make sure you’re logged in to Runalyze, and then navigate to this URL - the csv should automatically download:</p>
+<p><a href="https://runalyze.com/_internal/data/activities/all">https://runalyze.com/_internal/data/activities/all</a></p>
+<p>You can also view a json of your daily effective VO2max at <a href="https://runalyze.com/_internal/data/athlete/history/vo2max">https://runalyze.com/_internal/data/athlete/history/vo2max</a></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -256,6 +293,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return popup.innerHTML;
     });
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->
