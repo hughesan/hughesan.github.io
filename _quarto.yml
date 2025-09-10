@@ -3,6 +3,7 @@ project:
   output-dir: docs
 
 website:
+  google-analytics: "G-NWH73BF1QN"
   title: "Cauchy's Lap"
   navbar:
     search: true
