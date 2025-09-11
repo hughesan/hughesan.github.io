@@ -4,13 +4,13 @@ project:
 
 website:
   google-analytics: "G-NWH73BF1QN"
-  title: "Cauchy's Lap"
+  title: "Cauchy's Lap: a running blog"
   navbar:
     search: true
     logo: "inkscape-logo/bitmap2.png"
     right:
-      - text: "About"
-        file: about.qmd
+      - text: "Blog"
+        file: blog.qmd
       - text: "Connect with Me"
         menu:
           - text: "My CV"
