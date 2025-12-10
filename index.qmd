@@ -1,6 +1,10 @@
 ---
 title: "About"
 image: cauchy-baskey.jpg
+format:
+  html:
+    link-external-icon: true
+    link-external-newwindow: true
 about:
   template: jolla
   links:

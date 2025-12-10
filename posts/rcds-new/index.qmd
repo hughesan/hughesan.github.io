@@ -1,0 +1,26 @@
+---
+title: "Exciting news - introducing River City Data Science!"
+author: "Alex Hughes"
+date: "2025-12-10"
+date-modified: "2025-12-10"
+categories: [running, data, stats]
+format:
+  html:
+    link-external-icon: true
+    link-external-newwindow: true
+execute:
+  echo: false
+  message: false
+  warning: false
+draft: false
+image: "logo-RCDS-main.png"
+image-alt: "River City Data Science logo"
+---
+
+I’m excited to share that my husband and I have launched our new data science consulting company, [River City Data Science](https://rivercitydatascience.com)! We are offering support with data analysis, study design, statistical modeling, and project guidance for researchers, nonprofits, businesses, and anyone who needs expert statistical help.
+
+![](logo-RCDS-main.png){width=40% fig-align="center"}
+
+If you’re curious, want to work with us (or know someone who might), you can check out the site here: [River City Data Science](https://rivercitydatascience.com).
+
+Thanks for taking a look and for any shares or referrals!

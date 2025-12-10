@@ -1,0 +1,38 @@
+---
+title: "Not for blog - rva marathon"
+author: "Alex Hughes"
+date: "2025-11-29"
+date-modified: "2025-11-29"
+categories: [running, data, stats]
+format:
+  html:
+    link-external-icon: true
+    link-external-newwindow: true
+execute:
+  echo: false
+  message: false
+  warning: false
+draft: true
+---
+
+
+
+
+
+
+```{r}
+library(dplyr)
+library(lubridate)
+library(ggplot2)
+```
+
+```{r}
+data <- read.csv("C:/Users/Alex/Documents/River City Data Science/Data/rva-races-export.csv")
+```
+
+```{r}
+data %>%
+  mutate(chip_time = hms(chip_time),
+         avg_pace = ms(avg_pace))
+```
+
